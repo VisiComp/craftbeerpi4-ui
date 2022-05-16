@@ -12,7 +12,7 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: PT,
+        lng: 'PT',
         interpolation: {
             escapeValue : false,
         }
