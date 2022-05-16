@@ -29,6 +29,7 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.28.0",
     "file-saver": "^2.0.5",
+    "i18next": "^21.8.2",
     "mqtt-pattern": "^1.2.0",
     "mxgraph-js": "^1.0.1",
     "plotly.js": "^1.58.5",

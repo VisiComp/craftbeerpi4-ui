@@ -8,8 +8,10 @@ import { CBPiProvider } from './components/data';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ReactGA from 'react-ga';
+import './i18n';
 ReactGA.initialize('UA-72473288-2');
 ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 console.log("%cCraftBeerPi 4.0 🍻", "color:#8efa00; background:#000; font-size: 30pt");
 console.log("%cCreated with ♥️ by Manuel Fritsch", "color:#8efa00; background:#000; font-size: 10pt");
