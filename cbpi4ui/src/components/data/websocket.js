@@ -17,10 +17,12 @@ class CBPiWebSocket {
   
     open() {
       if (process.env.NODE_ENV === "development") {
+        console.log('sera?');
         console.log("DEV MODE ON", "WebSocket URL", process.env.REACT_APP_WEBSOCKET_URL);
         this.ws = new WebSocket(process.env.REACT_APP_WEBSOCKET_URL, []);
         
       } else {
+        console.log('else');
         this.ws = new WebSocket("ws://" + document.location.host + "/ws", []);
         
       }

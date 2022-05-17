@@ -5,7 +5,7 @@ import logo from "../../images/cbpi.png";
 import { useCBPi } from "../data";
 import paypal_logo from './paypal.png';
 import Button from "@material-ui/core/Button";
-
+import {useTranslation} from 'react-i18next';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -22,13 +22,14 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   const {state} = useCBPi();
+  const { t, i18n } = useTranslation();
   
   return (
     <div>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            About
+           ----------- {t('About')} ------------
           </Typography>
         </Grid>
         <Grid item></Grid>
@@ -39,7 +40,7 @@ const About = () => {
         <Grid item spacing={2} xs={12}>
           <Paper style={{ padding: 10 }}>
             This is CraftBeerPi Brewing Controller 4.0 (Version: {state.version} | Codename: {state.codename})
-            <p>It's an Open Source Project founded in 2015. More than 7,000 passioned Homebrewers and commercial Craft Brewerys are using CraftBeerPi. It's an open Eco System.</p>
+            <p>{t("Description")}</p>
             Website: http://www.CraftBeerPi.com <br />
             GitHub: http://github.com/manuel83 <br />
             Facebook: http://github.com/groups/craftbeerpi<br />
@@ -47,20 +48,20 @@ const About = () => {
             GitHub fork from Alexander Vollkopf: http://github.com/avollkopf <br />
             Openbrewing Documentation: <Button color="primary" target="_blank" href="https://openbrewing.gitbook.io/craftbeerpi4_support/" rel="noreferrer noopener">Link to Documentation</Button>
             <br />
-            <p>Cheers,</p>
+            <p>Cheersssssss,</p>
             <p> Manuel Fritsch / Alexander Vollkopf</p>
             <img width={30} src={logo} alt="Logo" /> CraftBeerPi
           </Paper>
         </Grid>
         <Grid item spacing={2} xs={12}>
           <Paper style={{ padding: 10 }}>
-            <h3>License</h3>
+            <h3>{t('License')}</h3>
             <p>GNU General Public License 3</p>
           </Paper>
         </Grid>
         <Grid item spacing={2} xs={12}>
           <Paper style={{ padding: 10 }}>
-            <h3>PayPal Donation</h3>
+            <h3>{t('PayPal Donation')}</h3>
             <p>CraftBeerPi is an free an open source project. If you like this software support this project with a donation.
               The donation is used to buy hardware and software to build this product. 
             </p>

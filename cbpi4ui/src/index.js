@@ -2,13 +2,13 @@ import { createTheme, ThemeProvider } from '@material-ui/core';
 import pink from "@material-ui/core/colors/pink";
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './i18n';
 import CraftBeerPiApp from './App';
 import { AlertProvider } from './components/alert/AlertProvider';
 import { CBPiProvider } from './components/data';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ReactGA from 'react-ga';
-import './i18n';
 ReactGA.initialize('UA-72473288-2');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
