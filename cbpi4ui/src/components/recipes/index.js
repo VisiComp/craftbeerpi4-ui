@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import AddIcon from "@material-ui/icons/Add";
 import React, { useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useHistory } from "react-router-dom";
 import { recipeapi } from "../data/recipeapi";
 import { NewRecipeDialog } from "./NewRecipeDialog";
@@ -64,13 +65,13 @@ const Recipes = () => {
 
  
 
-
+const { t, i18n } = useTranslation();
   return (
     <>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Recipes
+            {t('recipes')}
           </Typography>
         </Grid>
         <Grid item>
@@ -103,9 +104,9 @@ const Recipes = () => {
             history.push("/mashprofile");
           }}
         >
-          Active Recipe
+          {t('active recipe')}
         </Link>
-        <Typography color="textPrimary">Recipes</Typography>
+        <Typography color="textPrimary">{t('recipes')}</Typography>
       </Breadcrumbs>
       <Divider style={{ marginBottom: 10, marginTop: 10 }} />
       <List>

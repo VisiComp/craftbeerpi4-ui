@@ -1,10 +1,17 @@
 {
-    "Please select a recipe" : "Por favor selecione uma receita",
-    "Recipes": "Receitas",
-    "Active Recipe" : "Receita Ativa",
-    "License": "Licença",
-    "PayPal Donation": "Doação No Paypal",
-    "About":"Sobre",
-    "Description" : "É um projeto de código aberto fundado em 2015. Mais de 7.000 cervejeiros caseiros apaixonados e cervejarias artesanais comerciais estão usando o CraftBeerPi. É um Eco Sistema aberto."
+    "license": "Licença",
+    "paypal donation": "Doação No Paypal",
+    "about":"Sobre",
+    "description" : "É um projeto de código aberto fundado em 2015. Mais de 7.000 cervejeiros caseiros apaixonados e cervejarias artesanais comerciais estão usando o CraftBeerPi. É um Eco Sistema aberto.",
+    "this is cbpi": "Esse é o CraftBeerpi Brewing Controller 4.0 (Versão:",
+    "codename" : "Codinome",
+    "donation text": "CraftBeerPi é um projeto gratuito e de código aberto. Se você gosta deste software, apoie este projeto com uma doação. A doação é usada para comprar hardware e software para produzir este produto.",
+    "github fork": "Fork do Github de Alexander Vollkopf: http://github.com/avollkopf",
+    "openbrewing documentation":"Documentação do projeto:",
+    "cheers": "Um brinde,",
+    "link to documentation":"Link para Documentação",
 
+    "please select a recipe" : "Por favor selecione uma receita",
+    "recipes": "Receitas",
+    "active recipe" : "Receita Ativa"
     }

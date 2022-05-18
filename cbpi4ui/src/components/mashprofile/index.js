@@ -12,6 +12,7 @@ import AddIcon from "@material-ui/icons/Add";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import { default as React, useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useHistory } from "react-router-dom";
 import { useCBPi } from "../data";
 import { stepapi } from "../data/stepapi";
@@ -56,7 +57,7 @@ const MashProfile = () => {
     stepapi.savetobook();
   };
 
-
+  const { t, i18n } = useTranslation();
   if (!state.mashBasic.name) {
     return (
       <Grid container spacing={3}>
@@ -68,7 +69,7 @@ const MashProfile = () => {
               history.push("/recipes");
             }} startIcon={<MenuBookIcon />}
           >
-            Please select a Recipeeeeeeee
+            {t("please select a recipe")}
           </Button>
         </Grid>
       </Grid>

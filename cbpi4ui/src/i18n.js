@@ -4,15 +4,19 @@ import PTBR from './locales/pt-BR/translation.json';
 import ENUS from './locales/en/translation.json';
 
 const resources = {
-    'pt-BR': PTBR,
-    'en-us':ENUS
+    en:{
+        translation: ENUS
+    },
+    ptbr:{
+        translation: PTBR
+    }
 }
 
 i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: 'pt-BR',
+        lng: 'ptbr',
         interpolation: {
             escapeValue : false,
         }

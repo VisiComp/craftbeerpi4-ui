@@ -1,8 +1,8 @@
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import pink from "@material-ui/core/colors/pink";
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './i18n';
+import ReactDOM from 'react-dom';
 import CraftBeerPiApp from './App';
 import { AlertProvider } from './components/alert/AlertProvider';
 import { CBPiProvider } from './components/data';
