@@ -16,6 +16,8 @@ import {
 
     useHistory
 } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
+
 
 
 const MenuItem = ({ onClose, label, path = "/", children }) => {
@@ -26,6 +28,7 @@ const MenuItem = ({ onClose, label, path = "/", children }) => {
         onClose()
     }
 
+    
     return <><ListItem button onClick={()=>goTo(path)}>
         <ListItemIcon>
             {children}
@@ -38,18 +41,20 @@ const MenuItem = ({ onClose, label, path = "/", children }) => {
 }
 
 
+
 const Menu = ({onClose}) => {
+    const { t, i18n } = useTranslation();
     return <List>
-        <MenuItem onClose={onClose} label="Dashboard" ><DashboardIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="Mash Profile" path="/mashprofile"><BallotIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="Fermenter Profile" path="/fermenterprofile"><BallotIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="Hardware" path="/hardware"><DeveloperBoardIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="Settings" path="/settings"><SettingsIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="Analytics" path="/charting"><TimelineIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="Plugins" path="/plugins"><PowerIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="Recipe Upload" path="/upload"><CloudUploadIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="System" path="/system"><ComputerIcon /></MenuItem>
-        <MenuItem onClose={onClose} label="About" path="/about"><InfoIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("dashboard")} ><DashboardIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("mash profile")} path="/mashprofile"><BallotIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("fermenter profile")} path="/fermenterprofile"><BallotIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("hardware")} path="/hardware"><DeveloperBoardIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("settings")} path="/settings"><SettingsIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("analytics")} path="/charting"><TimelineIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("plugins")} path="/plugins"><PowerIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("recipe upload")} path="/upload"><CloudUploadIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("system")} path="/system"><ComputerIcon /></MenuItem>
+        <MenuItem onClose={onClose} label={t("about")} path="/about"><InfoIcon /></MenuItem>
     </List>
 }
 

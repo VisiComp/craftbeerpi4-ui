@@ -13,6 +13,32 @@
 
     "please select a recipe" : "Please select a recipe",
     "recipes" : "Recipes",
-    "active recipe" : "Active Recipe"
+    "active recipe" : "Active Recipe",
+    "filter" : "Filter",
+    "create" : "Create",
+    "cancel" : "Cancel",
+    "new recipe" : "New Recipe",
+    "name" : "Name",
+    "select fermenter" : "Select Fermenter ",
+    "clone recipe" : "Clone Recipe",
+    "new name" : "New Name",
+    "basic data" : "Basic Data",
+    "recipe book" : "Recipe Book",
+    "delete recipe" : "Delete Recipe",
+    "yes" : "Yes",
+    "no" : "No",
+    "delete recipe text": "Do you want to delete the Recipe",
+    "brew steps" : "Brew Steps",
 
+    "dashboard" : "Dashboard",
+    "mash profile" : "Mash Profile",
+    "fermenter profile" : "Fermenter Profile",
+    "hardware" : "Hardware",
+    "settings" : "Settings",
+    "analytics" : "Analytics",
+    "plugins" : "Plugins",
+    "recipe upload" : "Recipe Upload",
+    "system" : "System",
+    "menu about" : "About"
+    
     }

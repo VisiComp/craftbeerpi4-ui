@@ -6,6 +6,7 @@ import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import SaveIcon from "@material-ui/icons/Save";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { recipeapi } from "../data/recipeapi";
 import Header from "../util/Header";
 import { BasicData } from "./BasicData";
@@ -50,9 +51,11 @@ const RecipeEditor = () => {
     setOpen(true)
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <>
-      <Header title="Basic Data">
+      <Header title={t("basic data")}>
         <IconButton variant="contained" onClick={back}>
           <ArrowBackIcon />
         </IconButton>
@@ -68,8 +71,8 @@ const RecipeEditor = () => {
           <SaveIcon />
         </IconButton>
         <DeleteDialog
-            title="Delete Recipe"
-            message="Do you want to delete the Recipe"
+            title={t("delete recipe")}
+            message={t("delete recipe text")}
             callback={remove}
           />
       </Header>
@@ -81,7 +84,7 @@ const RecipeEditor = () => {
             history.push("/mashprofile");
           }}
         >
-          Active Recipe
+          {t("active recipe")}
         </Link>
         <Link
           color="inherit"
@@ -89,14 +92,14 @@ const RecipeEditor = () => {
             history.push("/recipes");
           }}
         >
-          Recipe Book
+          {t("recipe book")}
         </Link>
         <Typography color="textPrimary">{basicData.name}</Typography>
       </Breadcrumbs>
           <Divider/>
 
       <BasicData data={basicData} setData={setBasicData} />
-      <Header title="Brew Steps">
+      <Header title={t("brew steps")}>
         <IconButton variant="contained" onClick={addStep}>
           <AddIcon />
         </IconButton>

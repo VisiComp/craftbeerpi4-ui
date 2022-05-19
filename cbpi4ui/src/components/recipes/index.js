@@ -82,7 +82,7 @@ const { t, i18n } = useTranslation();
               onChange={(e) => {
                 setFilter(e.target.value);
               }}
-              placeholder="Filter"
+              placeholder={t("filter")}
               inputProps={{ "aria-label": "filter settings" }}
             />
             <IconButton type="submit" className={classes.iconButton} aria-label="search">

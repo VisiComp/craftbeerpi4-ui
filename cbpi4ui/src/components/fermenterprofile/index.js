@@ -13,6 +13,7 @@ import MenuBookIcon from "@material-ui/icons/MenuBook";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import { default as React, useEffect, useState } from "react";
 import { useHistory , useParams} from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { useCBPi } from "../data";
 import { fermenterapi } from "../data/fermenterapi"; 
 import FermenterDeleteDialog from "../util/FermenterDeleteDialog";  
@@ -72,6 +73,7 @@ const FermenterProfile = () => {
     };
   };
 
+  const { t, i18n } = useTranslation();
 
   if (!fermenterid) { // Mashbasic finden und anpassen (vermutlich //data/index.js)
     return (
@@ -84,7 +86,7 @@ const FermenterProfile = () => {
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Select Fermenter : {" "}
+            {t("select fermenter")} : {" "}
           </Typography> 
           <FermenterSelect value={fermenterid} onChange={onChange} label="" />
         </Grid>

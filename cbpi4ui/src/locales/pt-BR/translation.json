@@ -13,5 +13,31 @@
 
     "please select a recipe" : "Por favor selecione uma receita",
     "recipes": "Receitas",
-    "active recipe" : "Receita Ativa"
+    "active recipe" : "Receita Ativa",
+    "filter" : "Filtrar",
+    "create" : "Criar",
+    "cancel" : "Cancelar",
+    "new recipe" : "Nova Receita",
+    "name" : "Nome",
+    "select fermenter" : "Selecione a Fermentadora ",
+    "clone recipe" : "Clonar Receita",
+    "new name" : "Novo Nome",
+    "basic data" : "Dados Basicos",
+    "recipe book" : "Livro de Receitas",
+    "delete recipe" : "Deletar Receita",
+    "yes" : "Sim",
+    "no" : "Não",
+    "delete recipe text": "Você quer deletar a receita?",
+    "brew steps" : "Etapas de Preparo",
+
+    "dashboard" : "Painel de Controle",
+    "mash profile" : "Mash Profile",
+    "fermenter profile" : "Perfil da Fermentadora",
+    "hardware" : "Hardware",
+    "settings" : "Configurações",
+    "analytics" : "Análises",
+    "plugins" : "Plugins",
+    "recipe upload" : "Carregar Receita",
+    "system" : "Sistema",
+    "menu about" : "Sobre"
     }
