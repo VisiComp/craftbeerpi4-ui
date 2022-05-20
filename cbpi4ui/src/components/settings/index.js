@@ -7,6 +7,7 @@ import AddIcon from "@material-ui/icons/Add";
 import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 import SearchIcon from "@material-ui/icons/Search";
 import React, { useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useAlert } from "../alert/AlertProvider";
 import { useCBPi } from "../data";
 import { configapi } from "../data/configapi";
@@ -16,6 +17,7 @@ import KettleSelect from "../util/KettleSelect";
 import FermenterSelect from "../util/FermenterSelect";
 import SensorSelect from "../util/SensorSelect";
 import StepTypeSelect from "../util/StepTypeSelect";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -123,12 +125,15 @@ const Settings = () => {
       }, {});
   }
 
+  const { t, i18n } = useTranslation();
+
+
   return (
     <>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Settings
+            {t("settings")}
           </Typography>
         </Grid>
         <Grid item>
@@ -139,7 +144,7 @@ const Settings = () => {
               onChange={(e) => {
                 setFilter(e.target.value);
               }}
-              placeholder="Filter"
+              placeholder={t("filter")}
               inputProps={{ "aria-label": "filter settings" }}
             />
             <IconButton type="submit" className={classes.iconButton} aria-label="search">
@@ -161,8 +166,8 @@ const Settings = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Parameter</TableCell>
-              <TableCell align="right">Value</TableCell>
+              <TableCell>{t("parameter")}</TableCell>
+              <TableCell align="right">{t("value")}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

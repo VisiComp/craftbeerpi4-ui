@@ -11,11 +11,13 @@ import TableRow from '@material-ui/core/TableRow';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
 import { CBPiContext } from '../data';
 import { actorapi } from '../data/actorapi';
 import ActorButton from '../util/ActorButton';
 import ActorSwitch from '../util/ActorSwitch';
 import DeleteDialog from '../util/DeleteDialog';
+
 
 const useStyles = makeStyles({
     table: {
@@ -34,17 +36,20 @@ const ActorTable = () => {
         actorapi.remove(id)
         actions.delete_actor(id)
     }
+
+    const { t, i18n } = useTranslation();
+
     return (
         <>
             <TableContainer component={Paper}>
                 <Table className={classes.table} dense={true} table size="small" aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Name</TableCell>
-                            <TableCell align="right" className="hidden-xs">Type</TableCell>
-                            <TableCell align="right" className="hidden-xs">GPIO</TableCell>
-                            <TableCell align="right" className="hidden-xs">State</TableCell>
-                            <TableCell align="right" className="hidden-xs">Actions</TableCell>
+                            <TableCell>{t("name")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("type")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("GPIO")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("state")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("actions")}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -59,7 +64,7 @@ const ActorTable = () => {
                                 <TableCell align="right" className="hidden-xs">{row.props["GPIO"]}</TableCell>
                                 <TableCell align="right" className="hidden-xs"><ActorSwitch id={row.id}/></TableCell>
                                 <TableCell align="right" className="hidden-xs">
-                                    <DeleteDialog title="Delete Actor" message="Do you want to delete the Actor" id={row.id} callback={remove_callback} />
+                                    <DeleteDialog title={t("delete actor")} message={t("delete actor text")} id={row.id} callback={remove_callback} />
                                     <IconButton aria-label="delete" size="small" onClick={() => { history.push("/actor/"+row.id) }} >
                                       <VisibilityIcon />
                                     </IconButton>

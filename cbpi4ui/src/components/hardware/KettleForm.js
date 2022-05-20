@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { useCBPi } from "../data";
 import ActorSelect from "../util/ActorSelect";
 import LogicSelect from "../util/LogicSelect";
@@ -108,10 +109,13 @@ const KettleForm = () => {
     }
   }
 
+  const { t, i18n } = useTranslation();
+
+
   return (
     <>
       <Typography variant="h6" gutterBottom>
-        Kettle Config
+        {t("kettle config")}
       </Typography>
       <Breadcrumbs aria-label="breadcrumb">
         <Link
@@ -120,7 +124,7 @@ const KettleForm = () => {
             history.push("/hardware");
           }}
         >
-          Kettle
+          {t("kettle")}
         </Link>
         <Typography color="textPrimary">{name}</Typography>
       </Breadcrumbs>
@@ -129,16 +133,16 @@ const KettleForm = () => {
       <Paper className={classes.paper}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
-            <TextField required id="name" label="Name" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
+            <TextField required id="name" label={t("name")} fullWidth value={name} onChange={(e) => setName(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
             <LogicSelect value={type} onChange={onChangeType} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ActorSelect label="Heater" value={heater} onChange={(e) => setHeater(e.target.value)} />
+            <ActorSelect label={t("heater")} value={heater} onChange={(e) => setHeater(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ActorSelect label="Agitator" value={agitator} onChange={(e) => setAgitator(e.target.value)} />
+            <ActorSelect label={t("agitator")} value={agitator} onChange={(e) => setAgitator(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
             <SensorSelect value={sensor} onChange={(e) => setSensor(e.target.value)} />
@@ -154,7 +158,7 @@ const KettleForm = () => {
             }}
             className={classes.button}
           >
-            Cancel
+            {t("cancel")}
           </Button>
           <Button
             variant="contained"
@@ -164,7 +168,7 @@ const KettleForm = () => {
             }}
             className={classes.button}
           >
-            Save
+            {t("save")}
           </Button>
         </div>
       </Paper>

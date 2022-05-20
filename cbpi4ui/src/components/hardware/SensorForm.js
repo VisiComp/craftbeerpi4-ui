@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { useCBPi } from "../data";
 import PropsEdit from "../util/PropsEdit";
 import SensorTypeSelect from "../util/SensorTypeSelect";
@@ -92,10 +93,13 @@ const SensorForm = () => {
     }
   }
 
+  const { t, i18n } = useTranslation();
+
+
   return (
     <>
       <Typography variant="h6" gutterBottom>
-        Sensor Config
+        {t("sensor config")}
       </Typography>
       <Breadcrumbs aria-label="breadcrumb">
         <Link
@@ -104,7 +108,7 @@ const SensorForm = () => {
             history.push("/hardware");
           }}
         >
-          Sensor
+          {t("sensor")}
         </Link>
         <Typography color="textPrimary">{name}</Typography>
       </Breadcrumbs>
@@ -113,10 +117,10 @@ const SensorForm = () => {
       <Paper className={classes.paper}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
-            <TextField required id="name" label="Name" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
+            <TextField required id="name" label={t("name")} fullWidth value={name} onChange={(e) => setName(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <SensorTypeSelect label="Type" value={type} onChange={onChangeType} />
+            <SensorTypeSelect label={t("type")} value={type} onChange={onChangeType} />
           </Grid>
 
           <PropsEdit config={propsConfig} data={props} onChange={onChangeProps} />
@@ -130,7 +134,7 @@ const SensorForm = () => {
             }}
             className={classes.button}
           >
-            Cancel
+            {t("cancel")}
           </Button>
           <Button
             variant="contained"
@@ -140,7 +144,7 @@ const SensorForm = () => {
             }}
             className={classes.button}
           >
-            Save
+            {t("save")}
           </Button>
         </div>
       </Paper>

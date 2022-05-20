@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import AddIcon from "@material-ui/icons/Add";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import Header from "../util/Header";
 import ActorTable from "./ActorTable";
 import KettleTable from "./KettleTable";
@@ -21,13 +22,15 @@ const useStyles = makeStyles((theme) => ({
 export default function Hardware() {
   const classes = useStyles();
   const history = useHistory();
+  
+  const { t, i18n } = useTranslation();
 
   return (
     <>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Hardware
+            {t("hardware")}
           </Typography>
         </Grid>
         <Grid item></Grid>
@@ -37,7 +40,7 @@ export default function Hardware() {
       <Grid container spacing={3}>
         <Grid item sm={12}>
           <Paper className={classes.paper}>
-            <Header title="Kettle">
+            <Header title={t("kettle")}>
               <IconButton
                 variant="contained"
                 onClick={() => {
@@ -52,7 +55,7 @@ export default function Hardware() {
         </Grid>
         <Grid item sm={12}>
           <Paper className={classes.paper}>
-            <Header title="Fermenter">
+            <Header title={t("fermenter")}>
               <IconButton
                 variant="contained"
                 onClick={() => {
@@ -67,7 +70,7 @@ export default function Hardware() {
         </Grid>
         <Grid item sm={12}>
           <Paper className={classes.paper}>
-            <Header title="Sensor">
+            <Header title={t("sensor")}>
               
 
               <IconButton
@@ -84,7 +87,7 @@ export default function Hardware() {
         </Grid>
         <Grid item sm={12}>
           <Paper className={classes.paper}>
-            <Header title="Actor">
+            <Header title={t("actor")}>
             <IconButton
                 variant="contained"
                 onClick={() => {

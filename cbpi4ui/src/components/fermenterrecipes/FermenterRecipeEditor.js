@@ -6,6 +6,7 @@ import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import SaveIcon from "@material-ui/icons/Save";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { fermenterrecipeapi } from "../data/fermenterrecipeapi";
 import Header from "../util/Header";
 import { BasicData } from "./BasicData";
@@ -58,9 +59,12 @@ const FermenterRecipeEditor = () => {
     setOpenferment(true)
   };
 
+  const { t, i18n } = useTranslation();
+
+
   return (
     <>
-      <Header title="Basic Data">
+      <Header title={t("basic data")}>
         <IconButton variant="contained" onClick={back}>
           <ArrowBackIcon />
         </IconButton>
@@ -78,8 +82,8 @@ const FermenterRecipeEditor = () => {
           <SaveIcon />
         </IconButton>
         <DeleteDialog
-            title="Delete Fermenter Recipe"
-            message="Do you want to delete the Fermenter Recipe"
+            title={t("delete fermenter recipe")}
+            message={t("delete fermenter recipe text")}
             callback={remove}
           />
       </Header>
@@ -91,7 +95,7 @@ const FermenterRecipeEditor = () => {
             history.push("/fermenterprofile");
           }}
         >
-          Active Recipe
+          t{("active recipe")}
         </Link>
         <Link
           color="inherit"
@@ -99,14 +103,14 @@ const FermenterRecipeEditor = () => {
             history.push("/fermenterrecipes");
           }}
         >
-          Fermenter Recipe Book
+          {t("fermenter recipe book")}
         </Link>
         <Typography color="textPrimary">{basicData.name}</Typography>
       </Breadcrumbs>
           <Divider/>
 
       <BasicData data={basicData} setData={setBasicData} />
-      <Header title="Fermenter Steps">
+      <Header title={t("fermenter steps")}>
         <IconButton variant="contained" onClick={addStep}>
           <AddIcon />
         </IconButton>

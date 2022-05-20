@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { useCBPi } from "../data";
 import ActorSelect from "../util/ActorSelect";
 import FermenterLogicSelect from "../util/FermenterLogicSelect";
@@ -123,10 +124,13 @@ const FermenterForm = () => {
     }
   }
 
+  const { t, i18n } = useTranslation();
+
+
   return (
     <>
       <Typography variant="h6" gutterBottom>
-        Fermenter Config
+        {t("fermenter config")}
       </Typography>
       <Breadcrumbs aria-label="breadcrumb">
         <Link
@@ -135,7 +139,7 @@ const FermenterForm = () => {
             history.push("/hardware");
           }}
         >
-          Fermenter
+          {t("fermenter")}
         </Link>
         <Typography color="textPrimary">{name}</Typography>
       </Breadcrumbs>
@@ -144,34 +148,34 @@ const FermenterForm = () => {
       <Paper className={classes.paper}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
-            <TextField required id="name" label="Name" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
+            <TextField required id="name" label={t("name")} fullWidth value={name} onChange={(e) => setName(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
             <FermenterLogicSelect value={type} onChange={onChangeType} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ActorSelect label="Heater" value={heater} onChange={(e) => setHeater(e.target.value)} />
+            <ActorSelect label={t("heater")} value={heater} onChange={(e) => setHeater(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ActorSelect label="Cooler" value={cooler} onChange={(e) => setCooler(e.target.value)} />
+            <ActorSelect label={t("cooler")} value={cooler} onChange={(e) => setCooler(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ActorSelect label="Valve" value={valve} onChange={(e) => setValve(e.target.value)} />
+            <ActorSelect label={t("valve")} value={valve} onChange={(e) => setValve(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <SensorSelect label="Temp Sensor" value={sensor} onChange={(e) => setSensor(e.target.value)} />
+            <SensorSelect label={t("temp sensor")} value={sensor} onChange={(e) => setSensor(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <SensorSelect label="Pressure Sensor" value={pressure_sensor} onChange={(e) => setPressure_Sensor(e.target.value)} />
+            <SensorSelect label={t("pressure sensor")} value={pressure_sensor} onChange={(e) => setPressure_Sensor(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <TextField label="BrewName" fullWidth value={brewname} onChange={(e) => setBrewname(e.target.value)} />
+            <TextField label={t("brew name")} fullWidth value={brewname} onChange={(e) => setBrewname(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <TextField type="number" label="TargetTemp" fullWidth value={target_temp} onChange={(e) => setTargettemp(e.target.value)} />
+            <TextField type="number" label={t("target temp")} fullWidth value={target_temp} onChange={(e) => setTargettemp(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <TextField type="number" label="TargetPressure" fullWidth value={target_pressure} onChange={(e) => setTargetpressure(e.target.value)} />
+            <TextField type="number" label={t("target pressure")} fullWidth value={target_pressure} onChange={(e) => setTargetpressure(e.target.value)} />
           </Grid>
           <PropsEdit config={propsConfig} data={props} onChange={onChangeProps} />
         </Grid>
@@ -184,7 +188,7 @@ const FermenterForm = () => {
             }}
             className={classes.button}
           >
-            Cancel
+            {t("cancel")}
           </Button>
           <Button
             variant="contained"
@@ -194,7 +198,7 @@ const FermenterForm = () => {
             }}
             className={classes.button}
           >
-            Save
+            {t("save")}
           </Button>
         </div>
       </Paper>

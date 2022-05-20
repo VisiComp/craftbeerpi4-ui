@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { useCBPi } from "../data";
 import ActorTypeSelect from "../util/ActorTypeSelect";
 import PropsEdit from "../util/PropsEdit";
@@ -98,10 +99,13 @@ const ActorForm = () => {
     }
   }
 
+  const { t, i18n } = useTranslation();
+
+
   return (
     <>
       <Typography variant="h6" gutterBottom>
-        Actor Config
+        {t("actor config")}
       </Typography>
       <Breadcrumbs aria-label="breadcrumb">
         <Link
@@ -110,7 +114,7 @@ const ActorForm = () => {
             history.push("/hardware");
           }}
         >
-          Actor
+          {t("actor")}
         </Link>
         <Typography color="textPrimary">{name}</Typography>
       </Breadcrumbs>
@@ -119,10 +123,10 @@ const ActorForm = () => {
       <Paper className={classes.paper}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
-            <TextField required id="name" label="Name" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
+            <TextField required id="name" label={t("name")} fullWidth value={name} onChange={(e) => setName(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ActorTypeSelect label="Type" value={type} onChange={onChangeType} />
+            <ActorTypeSelect label={t("type")} value={type} onChange={onChangeType} />
           </Grid>
 
           <PropsEdit config={propsConfig} data={props} onChange={onChangeProps} />
@@ -136,7 +140,7 @@ const ActorForm = () => {
             }}
             className={classes.button}
           >
-            Cancel
+            {t("cancel")}
           </Button>
           <Button
             variant="contained"
@@ -146,7 +150,7 @@ const ActorForm = () => {
             }}
             className={classes.button}
           >
-            Save
+            {t("save")}
           </Button>
         </div>
       </Paper>

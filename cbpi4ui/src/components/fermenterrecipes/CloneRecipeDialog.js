@@ -2,6 +2,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { fermenterrecipeapi } from "../data/fermenterrecipeapi";
+import {useTranslation} from 'react-i18next';
 
 
 export const CloneRecipeDialog = ({id, open, setOpen}) => {
@@ -20,19 +21,22 @@ export const CloneRecipeDialog = ({id, open, setOpen}) => {
         setOpen(false)
     }
 
+    const { t, i18n } = useTranslation();
+
+
     return <Dialog open={open} onClose={cancel} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
-    <DialogTitle id="alert-dialog-title">Clone Recipe</DialogTitle>
+    <DialogTitle id="alert-dialog-title">{t("clone recipe")}</DialogTitle>
     <DialogContent>
       <DialogContentText id="alert-dialog-description">
-            <TextField label="New Name" value={name} onChange={(e)=>setName(e.target.value)} />
+            <TextField label={t("new name")} value={name} onChange={(e)=>setName(e.target.value)} />
       </DialogContentText>
     </DialogContent>
     <DialogActions>
       <Button onClick={cancel} color="secondary" autoFocus variant="contained">
-        Cancel
+        {t("cancel")}
       </Button>
       <Button onClick={create} color="primary" variant="contained">
-        Create
+        {t("create")}
       </Button>
     </DialogActions>
   </Dialog>

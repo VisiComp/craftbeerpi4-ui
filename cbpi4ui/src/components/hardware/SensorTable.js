@@ -10,6 +10,7 @@ import TableRow from "@material-ui/core/TableRow";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { CBPiContext } from "../data";
 import { sensorapi } from "../data/sensorapi";
 import DeleteDialog from "../util/DeleteDialog";
@@ -35,6 +36,7 @@ const SensorTable = () => {
     return sensor.props.Sensor ? sensor.props.Sensor : ""
   };
   
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -42,21 +44,21 @@ const SensorTable = () => {
         <Table className={classes.table} dense table size="small" aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
+              <TableCell>{t("name")}</TableCell>
               <TableCell align="right" className="hidden-xs">
-                Type
+                {t("type")}
               </TableCell>
               <TableCell align="right" className="hidden-xs">
-                OneWire ID
+                {t("onewire id")}
               </TableCell>
               <TableCell align="right" className="hidden-xs">
-                Sensor ID
+                {t("sensor id")}
               </TableCell>
               <TableCell align="right" className="hidden-xs">
-                Value
+                {t("value")}
               </TableCell>
               <TableCell align="right" className="hidden-xs">
-                Actions
+                {t("actions")}
               </TableCell>
             </TableRow>
           </TableHead>
@@ -79,7 +81,7 @@ const SensorTable = () => {
                   <SensorValue id={row.id}/>
                 </TableCell>
                 <TableCell align="right" className="hidden-xs">
-                  <DeleteDialog title="Delete Sensor" message="Do you want to delete the Sensor" id={row.id} callback={remove_callback} />
+                  <DeleteDialog title={t("delete sensor")} message={t("delete sensor text")} id={row.id} callback={remove_callback} />
                   <IconButton
                     aria-label="delete"
                     size="small"

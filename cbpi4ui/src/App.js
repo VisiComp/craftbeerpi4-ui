@@ -11,6 +11,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import i16n from './i18n';
 import "./App.css";
 import About from "./components/about";
 import Upload from "./components/upload";
@@ -35,6 +36,7 @@ import FermenterRecipes from "./components/fermenterrecipes";
 import RecipeEditor from "./components/recipes/RecipeEditor";
 import FermenterRecipeEditor from "./components/fermenterrecipes/FermenterRecipeEditor";
 import { Charting } from "./components/charting";
+import i18n from "./i18n";
 
 
 const drawerWidth = 240;
@@ -137,6 +139,12 @@ const CraftBeerPiApp = () => {
     setOpen(true);
   };
 
+  const changeLanguage = (ln) =>{
+    return()=>{
+      i18n.changeLanguage(ln)
+
+    };
+  };
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -153,6 +161,10 @@ const CraftBeerPiApp = () => {
                   <Typography component="h1" variant="h4" color="inherit" noWrap>
                     CraftBeerPi 4.0
                   </Typography>
+                </div>
+                <div> 
+                  <button onClick={changeLanguage("en")}>en</button>
+                  <button onClick={changeLanguage("ptbr")}>pt</button>
                 </div>
                 <IconButton color="inherit">
                   <Badge badgeContent={0} color="secondary">

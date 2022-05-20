@@ -3,6 +3,7 @@ import AutorenewIcon from "@material-ui/icons/Autorenew";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
 import { useState } from "react";
+import {useTranslation} from 'react-i18next';
 import Plot from "react-plotly.js";
 import { useSensor } from "../data";
 import { logapi } from "../data/logapi";
@@ -48,12 +49,14 @@ const clear_logs = () => {
   window.location.reload();
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-          Analytics
+          {t("analytics")}
           </Typography>
         </Grid>
       </Grid>
@@ -72,8 +75,8 @@ const clear_logs = () => {
             <AutorenewIcon />
           </IconButton>
           <DeleteDialog
-            title="Delete logs"
-            message="Do you want to delete the selected logs?"
+            title={t("delete logs")}
+            message={t("delete logs text")}
             callback={clear_logs}
           />
         </Grid>

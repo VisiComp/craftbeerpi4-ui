@@ -10,6 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
 import { CBPiContext, useCBPi } from '../data';
 import { kettleapi } from '../data/kettleapi';
 import ActorValue from '../util/ActorValue';
@@ -30,19 +31,22 @@ const KettleTable = () => {
     const remove_callback = (id) => {
         actions.delete_kettle(id)
     }
+
+    const { t, i18n } = useTranslation();
+
     return (
         <>
             <TableContainer >
                 <Table className={classes.table} dense table size="small" aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Name</TableCell>
-                            <TableCell align="right" className="hidden-xs">Logic</TableCell>
-                            <TableCell align="right" className="hidden-xs">Heater</TableCell>
-                            <TableCell align="right" className="hidden-xs">Agitator</TableCell>
-                            <TableCell align="right" className="hidden-xs">Sensor</TableCell>
-                            <TableCell align="right" className="hidden-xs">Target Temp</TableCell>
-                            <TableCell align="right" className="hidden-xs">Actions</TableCell>
+                            <TableCell>{t("name")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("logic")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("heater")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("agitator")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("sensor")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("target temp")}</TableCell>
+                            <TableCell align="right" className="hidden-xs">{t("actions")}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -59,7 +63,7 @@ const KettleTable = () => {
                                 <TableCell align="right" className="hidden-xs"><SensorValue id={row.sensor}/></TableCell>
                                 <TableCell align="right" className="hidden-xs">{row.target_temp}</TableCell>
                                 <TableCell align="right" className="hidden-xs">
-                                    <DeleteDialog title="Delete Kettle" message="Do you want to delete" id={row.id} callback={remove_callback} />
+                                    <DeleteDialog title={t("delete kettle")} message={t("delete text")} id={row.id} callback={remove_callback} />
                                     <IconButton aria-label="delete" size="small" onClick={() => { history.push("/kettle/"+row.id) }} >
                                       <VisibilityIcon />
                                     </IconButton>

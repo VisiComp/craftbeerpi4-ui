@@ -39,6 +39,57 @@
     "plugins" : "Plugins",
     "recipe upload" : "Recipe Upload",
     "system" : "System",
-    "menu about" : "About"
+    "menu about" : "About",
+
+    "fermenter recipes" : "Fermenter Recipes",
+    "new fermenter recipe" : "New Fermenter Recipe",
+    "delete fermenter recipe" : "Delete Fermenter Recipe",
+    "delete fermenter recipe text": "Do you want to delete the Fermenter Recipe",
+    "fermenter recipe book" : "Fermenter Recipe Book",
+    "fermenter steps" : "Fermenter Steps",
+    "send recipe" : "Send Recipe",
+    "to fermenter": "To Fermenter",
+    "send" : "Send",
+    "parameter" : "Parameter",
+    "value" : "Value",
+    "delete logs" : "Delete Logs",
+    "delete logs text" : "Do you want to delete the selected logs?",
+
+    "kettle" : "Kettle",
+    "logic" : "Logic",
+    "heater" : "Heater",
+    "sensor" : "Sensor",
+    "agitator" : "Agitator",
+    "target temp" : "Target Temp",
+    "actions" : "Actions",
+    "cooler" : "Cooler",
+    "type" : "Type",
+    "onewire id" : "OneWire ID",
+    "sensor id" : "Sensor ID",
+    "GPIO" : "GPIO",
+    "state" : "State",
+    "fermenter" : "Fermenter",
+    "actor" : "Actor",
+    "delete actor" : "Delete Actor",
+    "delete actor text" : "Do you want to delete the Actor",
+    "delete fermenter" : "Delete Fermenter",
+    "delete text" : "Do you want to delete?",
+    "delete kettle" : "Delete Kettle",
+    "delete sensor" : "Delete Sensor",
+    "delete sensor text" : "Do you want to delete the Sensor",
+    "save" : "Save",
+    "actor config" : "Actor Config",
+    "fermenter config": "Fermenter Config",
+    "valve" : "Valve",
+    "temp sensor" : "Temp Sensor",
+    "pressure sensor" : "Pressure Sensor",
+    "brew name" : "BrewName",
+    "target pressure" : "TargetPressure",
+    "kettle config" : "Kettle Config",
+    "sensor config" : "Sensor Config"
+    
+
+    
+
     
     }

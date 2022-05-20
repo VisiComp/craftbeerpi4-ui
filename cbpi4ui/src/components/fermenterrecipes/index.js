@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import AddIcon from "@material-ui/icons/Add";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { fermenterrecipeapi } from "../data/fermenterrecipeapi";
 import { NewRecipeDialog } from "./NewRecipeDialog";
 import SearchIcon from "@material-ui/icons/Search";
@@ -64,13 +65,14 @@ const FermenterRecipes = () => {
 
  
 
+  const { t, i18n } = useTranslation();
 
   return (
     <>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Fermenter Recipes
+            {t("fermenter recipes")}
           </Typography>
         </Grid>
         <Grid item>
@@ -81,7 +83,7 @@ const FermenterRecipes = () => {
               onChange={(e) => {
                 setFilter(e.target.value);
               }}
-              placeholder="Filter"
+              placeholder={t("filter")}
               inputProps={{ "aria-label": "filter settings" }}
             />
             <IconButton type="submit" className={classes.iconButton} aria-label="search">
@@ -103,9 +105,9 @@ const FermenterRecipes = () => {
             history.push("/fermenterprofile");
           }}
         >
-          Active Recipe
+          {t("active recipe")}
         </Link>
-        <Typography color="textPrimary">Recipes</Typography>
+        <Typography color="textPrimary">{t("recipes")}</Typography>
       </Breadcrumbs>
       <Divider style={{ marginBottom: 10, marginTop: 10 }} />
       <List>
