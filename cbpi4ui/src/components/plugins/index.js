@@ -14,8 +14,10 @@ import Typography from "@material-ui/core/Typography";
 import SearchIcon from "@material-ui/icons/Search";
 import React, { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import {useTranslation} from 'react-i18next';
 import { CBPiContext } from "../data";
 import { pluginapi } from "../data/pluginapi";
+import { t } from "i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,6 +40,9 @@ const CBPiCard = ({item}) => {
   if (item["Home-page"] === "UNKNOWN" ) {
     homepage = false;
   }
+
+const { t, i18n } = useTranslation();
+
     return (
    
     <Card className={classes.root}>
@@ -55,9 +60,9 @@ const CBPiCard = ({item}) => {
             {item?.Summary}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Author: {item?.Author}
+          {t("author")}: {item?.Author}
           </Typography>
-          {homepage ? <Button href={item["Home-page"]} color="primary" target="_blank" rel="noreferrer noopener">Homepage</Button> : ""}
+          {homepage ? <Button href={item["Home-page"]} color="primary" target="_blank" rel="noreferrer noopener">{t("homepage")}</Button> : ""}
           {/*<Typography variant="body2" color="textSecondary" component="p">
           Homepage: {item?.Homepage}
           </Typography>*/}
@@ -100,7 +105,7 @@ const Plugins = () => {
     plugins  = state.plugins.filter(item => item.name.includes(filter) )
   }
   
-
+  const { t, i18n } = useTranslation();
   return (
     <Container maxWidth="lg" >
       <Grid
@@ -111,7 +116,7 @@ const Plugins = () => {
       >
         <Grid item>
           <Typography variant="h4" gutterBottom>
-            Plugins
+            {t("plugins")}
           </Typography>
         </Grid>
         <Grid item>
@@ -120,7 +125,7 @@ const Plugins = () => {
               className={classes.input}
               value={filter}
               onChange={(e) => {setFilter(e.target.value)}}
-              placeholder="Search CBPi Plugins"
+              placeholder={t("search cbpi plugins")}
               inputProps={{ "aria-label": "search plugins" }}
             />
             <IconButton
@@ -134,7 +139,7 @@ const Plugins = () => {
         </Grid>
       </Grid>
       <Breadcrumbs aria-label="breadcrumb">
-        <Typography color="textPrimary">Plugins</Typography>
+        <Typography color="textPrimary">{t("plugins")}</Typography>
       </Breadcrumbs>
       <Divider />
 

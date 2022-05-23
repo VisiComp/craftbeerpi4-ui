@@ -7,6 +7,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import IconButton from "@material-ui/core/IconButton";
 import SettingsBackupRestoreIcon from '@material-ui/icons/SettingsBackupRestore';
 import React from "react";
+import {useTranslation} from 'react-i18next';
+
 
 const RestartDialog2 = ({ btnText, title, message, callback, id }) => {
   const [open, setOpen] = React.useState(true);
@@ -20,6 +22,8 @@ const RestartDialog2 = ({ btnText, title, message, callback, id }) => {
     callback(id);
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <>
        <Dialog open={open} onClose={no} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
@@ -29,10 +33,10 @@ const RestartDialog2 = ({ btnText, title, message, callback, id }) => {
         </DialogContent>
         <DialogActions>
           <Button onClick={no} color="secondary" autoFocus variant="contained">
-            No
+            {t("no")}
           </Button>
           <Button onClick={yes} color="primary" variant="contained">
-            Yes
+            {t("yes")}
           </Button>
         </DialogActions>
       </Dialog>

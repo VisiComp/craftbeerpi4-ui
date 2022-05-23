@@ -86,8 +86,46 @@
     "brew name" : "BrewName",
     "target pressure" : "TargetPressure",
     "kettle config" : "Kettle Config",
-    "sensor config" : "Sensor Config"
+    "sensor config" : "Sensor Config",
     
+    "author" : "Author",
+    "homepage" : "Homepage",
+    "search cbpi plugins" : "Search CBPi Plugins",
+    "system settings" : "System Settings",
+    "system restart" : "System Restart",
+    "shutdown" : "Shutdown",
+    "restart system" : "Restart System",
+    "restart system text" : "Do you want to Restart the system",
+    "restart" : "Restart",
+    "shutdown system" : "Shutdown System",
+    "shutdown system text" : "Do you want to Shutdown the system",
+    "backup config" : "Backup Config",
+    "backup" : "Backup",
+    "restore config" : "Restore Config",
+    "(please restart system afterwards)" : "(Please restart system afterwards)",
+    "restore" :  "Restore",
+    "download log text" : "Download log (only for cbpi running as systemctl service)",
+    "logtime length for download" : "Logtime length for download",
+    "download" : "Download",
+    "upload svg" : "Upload SVG file to widgets folder",
+    "upload" : "Upload",
+    "system information" : "System Information",
+    "max 5mb" : "(Max: 5 Mb). ",
+    "dashboard functions" : "Dashboard functions",
+    "unit" : "Unit",
+    "operating system" : "Operating System",
+    "cpu count" : "CPU Count",
+    "cpu load" : "CPU Load",
+    "cpu frequency" : "CPU Frequency",
+    "system temp" : "System Temp",
+    "total memory" : "Total Memory",
+    "available memory" : "Available Memory",
+    "used memory" : "Used Memory",
+    "eth0 ip address" : "Eth0 IP Address",
+    "wlan0 ip Address" : "Wlan0 IP Address"
+
+    
+
 
     
 

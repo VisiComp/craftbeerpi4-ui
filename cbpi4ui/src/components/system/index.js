@@ -1,5 +1,6 @@
 import { Button, IconButton, Grid, Typography, Divider, makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import InputLabel from '@material-ui/core/InputLabel';
@@ -101,12 +102,14 @@ const CBPiSystem = () => {
     systemapi.downloadlog(logtime);
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <div>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            System Settings 
+            {t("system settings")} 
           </Typography>
         </Grid>
 
@@ -118,7 +121,7 @@ const CBPiSystem = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>System restart / Shutdown</TableCell>
+              <TableCell>{t("system restart")} / {t("shutdown")}</TableCell>
               <TableCell>
 
               </TableCell>
@@ -126,16 +129,16 @@ const CBPiSystem = () => {
 
 
                 <Grid>
-                  Restart:
+                  {t("restart")}:
                   <RestartDialog
-                    title="Restart System"
-                    message="Do you want to Restart the system"
+                    title={t("system restart")}
+                    message={t("restart system text")}
                     callback={restart}
                   />
-                  Shutdown:
+                  {t("shutdown")}:
                   <ShutdownDialog
-                    title="Shutdown System"
-                    message="Do you want to Shutdown the system"
+                    title={t("shutdown system")}
+                    message={t("shutdown system text")}
                     callback={shutdown}
                   />
 
@@ -150,7 +153,7 @@ const CBPiSystem = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Backup Config</TableCell>
+              <TableCell>{t("backup config")}</TableCell>
               <TableCell>
 
               </TableCell>
@@ -158,7 +161,7 @@ const CBPiSystem = () => {
 
 
                 <Grid>
-                  Backup:
+                  {t("backup")}:
                   <IconButton onClick={backup}>
                     <SaveIcon />
                   </IconButton>
@@ -174,7 +177,7 @@ const CBPiSystem = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Restore Config (Max: 5 Mb). (Please restart system afterwards)</TableCell>
+              <TableCell>{t("restore config")} {t("max 5mb")} {t( "(please restart system afterwards)")}</TableCell>
               <TableCell>
 
               </TableCell>
@@ -182,7 +185,7 @@ const CBPiSystem = () => {
 
 
                 <Grid>
-                  Restore:
+                  {t("restore")}:
                   <input accept=".zip" ref={hiddenFileInput} className={classes.input} id="icon-button-file" type="file" hidden onChange={handleChange} />
                   <label htmlFor="icon-button-file">
                     <IconButton className={classes.button} component="span">
@@ -202,19 +205,19 @@ const CBPiSystem = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Download log (only for cbpi running as systemctl service)</TableCell>
+              <TableCell>{t("download log text")}</TableCell>
               <TableCell>
 
               </TableCell>
               <TableCell>
-                  <InputLabel id="demo-simple-select-helper-label">Logtime length for download</InputLabel>
+                  <InputLabel id="demo-simple-select-helper-label">{t("logtime length for download")}</InputLabel>
                   <SelectBox options={logtimelist} value={logtime} onChange={LogtimeChange} />
                 </TableCell>
               <TableCell align="right">
 
 
                 <Grid>
-                  Download:
+                  {t("download")}:
                   <IconButton onClick={downloadlog}>
                     <SaveIcon />
                   </IconButton>
@@ -229,7 +232,7 @@ const CBPiSystem = () => {
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Dashboard functions 
+            {t("dashboard functions")} 
           </Typography>
         </Grid>
 
@@ -241,7 +244,7 @@ const CBPiSystem = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Upload SVG file to widgets folder (Max: 5 Mb)</TableCell>
+              <TableCell>{t("upload svg")} {t("max 5mb")}</TableCell>
               <TableCell>
 
               </TableCell>
@@ -249,7 +252,7 @@ const CBPiSystem = () => {
 
 
                 <Grid>
-                  Upload:
+                  {t("upload")}:
                   <input accept="image/svg+xml" ref={svghiddenFileInput} className={classes.input} id="icon-button-svgfile" type="file" hidden onChange={svghandleChange} />
                   <label htmlFor="icon-button-svgfile">
                     <IconButton className={classes.button} component="span">
@@ -268,7 +271,7 @@ const CBPiSystem = () => {
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            System Information
+            {t("system information")}
           </Typography>
         </Grid>
 
@@ -281,68 +284,68 @@ const CBPiSystem = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Parameter</TableCell>
+              <TableCell>{t("parameter")}</TableCell>
               <TableCell></TableCell>
-              <TableCell align="right">Value</TableCell>
-              <TableCell style={{ width: 30 }} align="left">Unit</TableCell>
+              <TableCell align="right">{t("value")}</TableCell>
+              <TableCell style={{ width: 30 }} align="left">{t("unit")}</TableCell>
             </TableRow>
           </TableHead>
           <TableRow>
-            <TableCell>Operating System</TableCell>
+            <TableCell>{t("operating system")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['system']}</TableCell>
             <TableCell align="left"></TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>CPU Count</TableCell>
+            <TableCell>{t("cpu count")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['cpucount']}</TableCell>
             <TableCell align="left"></TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>CPU Load</TableCell>
+            <TableCell>{t("cpu load")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['cpuload']}</TableCell>
             <TableCell align="left">%</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>CPU Frequency</TableCell>
+            <TableCell>{t("cpu frequency")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['cpufreq']}</TableCell>
             <TableCell align="left">Mhz</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>System Temp</TableCell>
+            <TableCell>{t("system temp")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['temp']}</TableCell>
             <TableCell align="left">{systeminfo['temp_unit']}</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Total Memory</TableCell>
+            <TableCell>{t("total memory")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['totalmem']}</TableCell>
             <TableCell align="left">Mb</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Available Memory</TableCell>
+            <TableCell>{t("available memory")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['availmem']}</TableCell>
             <TableCell align="left">Mb</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Used Memory</TableCell>
+            <TableCell>{t("used memory")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['mempercent']}</TableCell>
             <TableCell align="left">%</TableCell>
           </TableRow>
         <TableRow>
-            <TableCell>Eth0 IP Address</TableCell>
+            <TableCell>{t("eth0 ip address")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['eth0']}{" @ "}{systeminfo['eth0speed']}</TableCell>
             <TableCell align="left">Mbit</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Wlan0 IP Address</TableCell>
+            <TableCell>{t("wlan0 ip Address")}</TableCell>
             <TableCell></TableCell>
             <TableCell align="right">{systeminfo['wlan0']}{" @ "}{systeminfo['wlan0speed']}</TableCell>
             <TableCell align="left">Mbit</TableCell>
