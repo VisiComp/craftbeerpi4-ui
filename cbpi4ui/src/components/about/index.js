@@ -40,7 +40,7 @@ const About = () => {
         <Grid item spacing={2} xs={12}>
           <Paper style={{ padding: 10 }}>
             {t('this is cbpi')} {state.version} | {t('codename')} {state.codename})
-            <p>{t("description")}</p>
+            <p>{t("description about")}</p>
             Website: http://www.CraftBeerPi.com <br />
             GitHub: http://github.com/manuel83 <br />
             Facebook: http://github.com/groups/craftbeerpi<br />

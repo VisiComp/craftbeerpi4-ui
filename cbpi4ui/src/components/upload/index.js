@@ -1,5 +1,6 @@
 import { Button, Grid, Typography, Divider, makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import InputLabel from '@material-ui/core/InputLabel';
@@ -137,12 +138,14 @@ const Upload = () => {
     });
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <div>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{ marginTop: 10 }}>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Recipe Upload
+            {t("recipe upload")}
           </Typography>
         </Grid>
         <Grid item></Grid>
@@ -152,14 +155,14 @@ const Upload = () => {
       <Grid container spacing={2} className={classes.root}>
         <Grid item spacing={2} xs={12}>
           <Paper style={{ padding: 10 }}>
-            <p>You can upload recipes from BeerXML, MMuM-JSON, Brewfather or the Kleiner Brauhelfer V2 database .</p>
+            <p>{t("upload recipe text")}</p>
           </Paper>
         </Grid>
 
         <Grid item spacing={2} xs={12}>
           <Paper style={{ padding: 10 }}>
             <Button variant="contained" component="label">
-              Upload BeerXML File, MMuM-JSON or KBH V2 database file
+             {t("upload button")}
               <input ref={hiddenFileInput}
                 type="file"
                 onChange={handleChange}
@@ -175,18 +178,18 @@ const Upload = () => {
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Select Recipe</TableCell>
+                <TableCell>{t("select recipe")}</TableCell>
                 <TableCell>
 
                 </TableCell>
-                <TableCell align="right">Create</TableCell>
+                <TableCell align="right">{t("create")}</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
 
               <TableRow>
                 <TableCell>
-                  <InputLabel id="demo-simple-select-helper-label">BeerXML Recipe from uploaded file</InputLabel>
+                  <InputLabel id="demo-simple-select-helper-label">{t("beerxml recipe from uploaded file")}</InputLabel>
                   <SelectBox options={xmllist} value={xml} onChange={XMLChange} />
                 </TableCell>
                 <TableCell>
@@ -194,7 +197,7 @@ const Upload = () => {
                 </TableCell>
                 <TableCell align="right">
                   <Button variant="contained" component="label" >
-                    Create Recipe from BeerXML recipe
+                    {t("create recipe from beerxml recipe")}
                     <input
                       value={xml}
                       onClick={XMLSubmit}
@@ -205,7 +208,7 @@ const Upload = () => {
               </TableRow>
               <TableRow>
                 <TableCell>
-                  <InputLabel id="demo-simple-select-helper-label">MMuM-JSON Recipe from uploaded file</InputLabel>
+                  <InputLabel id="demo-simple-select-helper-label">{t("json recipe from uploaded file")}</InputLabel>
                   <SelectBox options={jsonlist} value={json} onChange={JSONChange} />
                 </TableCell>
                 <TableCell>
@@ -213,7 +216,7 @@ const Upload = () => {
                 </TableCell>
                 <TableCell align="right">
                   <Button variant="contained" component="label" >
-                    Create Recipe from MMuM-JSON recipe
+                    {t("create recipe from json")}
                     <input
                       value={json}
                       onClick={JSONSubmit}
@@ -224,7 +227,7 @@ const Upload = () => {
               </TableRow>
               <TableRow>
                 <TableCell>
-                  <InputLabel id="demo-simple-select-helper-label">Recipe from Kleiner Brauhelfer Database</InputLabel>
+                  <InputLabel id="demo-simple-select-helper-label">{t("recipe from kbh database")}</InputLabel>
                   <SelectBox options={kbhlist} value={kbh} onChange={KBHChange} />
                 </TableCell>
                 <TableCell>
@@ -232,7 +235,7 @@ const Upload = () => {
                 </TableCell>
                 <TableCell align="right">
                   <Button variant="contained" component="label" >
-                    Create Recipe from KBH Database
+                    {t("create recipe from kbh database")}
                     <input
                       value={kbh}
                       onClick={KBHSubmit}
@@ -243,16 +246,16 @@ const Upload = () => {
               </TableRow>
               <TableRow>
                 <TableCell>
-                  <InputLabel id="demo-simple-select-helper-label">Brewfather Recipes (50 Items max)</InputLabel>
+                  <InputLabel id="demo-simple-select-helper-label">{t("brewfather recipes 50")}</InputLabel>
                   <SelectBox options={bflist} value={bf} onChange={BFChange} />
                 </TableCell>
                 <TableCell>
-                  <InputLabel id="demo-simple-select-helper-label">Recipe Offset (display 50 items after offset)</InputLabel>
+                  <InputLabel id="demo-simple-select-helper-label">{t("recipe offset 50")}</InputLabel>
                   <SelectBox options={offsetlist} value={offset} onChange={OffsetChange} />
                 </TableCell>
                 <TableCell align="right">
                   <Button variant="contained" component="label" >
-                    Create Recipe from Brewfather Web App
+                    {t("create recipe from brewfather webapp")}
                     <input
                       value={bf}
                       onClick={BFSubmit}

@@ -174,9 +174,9 @@ const Settings = () => {
             {Object.keys(data).map((key) => (
               <TableRow key={key} selected={config[key].changed}>
                 <TableCell component="th" scope="row">
-                  {key}
+                  {t('settings_key_'+key)}
                   <div>
-                    <small>{config[key].description}</small>
+                    <small>{t('settings_description_'+key)}</small>
                   </div>
                 </TableCell>
                 <TableCell align="right">

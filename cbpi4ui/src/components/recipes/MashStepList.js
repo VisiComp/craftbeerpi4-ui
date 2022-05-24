@@ -4,6 +4,7 @@ import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import DeleteIcon from "@material-ui/icons/Delete";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useCBPi } from "../data";
 import PropsEdit from "../util/PropsEdit";
 import StepTypeSelect from "../util/StepTypeSelect";
@@ -47,6 +48,8 @@ const MashStepLine = ({ item, items, setItems, onSelectType, handleInput, handle
     move(items, index, 1);
   };
 
+  const { t, i18n } = useTranslation();
+  
   return (
     <Accordion>
       <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
@@ -90,7 +93,7 @@ const MashStepLine = ({ item, items, setItems, onSelectType, handleInput, handle
       <AccordionDetails>
         <Grid container spacing={3}>
           <Grid item xs={12} lg={2}>
-            <TextField label="Name" name="name" onChange={(e) => handleInput(index, e)} value={item.name} fullWidth />
+            <TextField label={t("name")} name="name" onChange={(e) => handleInput(index, e)} value={item.name} fullWidth />
           </Grid>
           <Grid item xs={12} lg={2}>
             <StepTypeSelect value={item.type} onChange={(e) => onSelectType(index, e.target.value)} />
