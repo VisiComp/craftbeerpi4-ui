@@ -68,3 +68,26 @@ circle{
   -moz-user-select: none;
   -webkit-user-drag: none;
 }
+
+.flag_buttons{
+display: flex;
+align-items: center;
+}
+
+#usaflag{
+  height: 5vmin;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+#brasilflag{
+  height: 5vmin;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+#germanyflag{
+  height: 5vmin;
+  margin-right: 3%;
+  cursor: pointer;
+}
