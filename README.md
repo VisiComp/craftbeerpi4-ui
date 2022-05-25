@@ -1,8 +1,10 @@
 # Introdução ao CraftBeer
 
-Craftbeerpi4 é uma solução de software de código aberto desenvolvida por Manuel Fritsch para controlar a fabricação e talvez mais no futuro fermentação de cerveja. O lado do servidor é baseado em python 3 e o front-end em uma interface react/material UI. 
+Este repositório é forked do craftbeerpi/craftbeerpi4-ui e tem o objetivo de desenvolver uma versão intencacional do software. 
 
-O hardware é focado no RapsberryPi, pois esta placa possui muitos GPIOs para ler sensores e controlar atores. No entanto, também é possível conectar outros sensores e atuadores via conexão http. Portanto, plugins são necessários.
+Craftbeerpi4 é uma solução de software de código aberto (https://github.com/craftbeerpi/craftbeerpi4) desenvolvida por Manuel Fritsch para controlar a fabricação e talvez mais no futuro fermentação de cerveja. O lado do servidor é baseado em python 3 e o front-end em uma interface react/material UI. 
+
+O hardware é focado no RapsberryPi 4, pois esta placa possui muitos GPIOs para ler sensores e controlar atuadores. No entanto, também é possível conectar outros sensores e atuadores via conexão http. Portanto, plugins são necessários.
 
 A interface do usuário tem a opção de definir até 10 painéis diferentes, por exemplo, visualizações separadas de infusão ou fermentação ou para definir uma visualização simples para o seu celular.
 
@@ -35,7 +37,7 @@ As notificações também são úteis no caso das etapas de mash, pois informam 
 
 # Instalacão do Raspberry Pi4
 
-Instale o Raspberry Pi OS usando o Raspberry Pi Image, ele  é a maneira rápida e fácil de instalar o Raspberry Pi OS e outros sistemas operacionais em um cartão microSD, pronto para uso com seu Raspberry Pi. 
+Instale o Raspberry Pi OS usando o Raspberry Pi Image, ele  é a maneira rápida e fácil de instalar o Raspberry Pi OS e outros sistemas operacionais em um cartão microSD, pronto para uso com seu Raspberry Pi. Maiores informações sobre a instalação no link https://www.raspberrypi.com/software/.
 
 Assista ao nosso vídeo de 45 segundos para saber como instalar um sistema operacional usando o Raspberry Pi Imager.
 
