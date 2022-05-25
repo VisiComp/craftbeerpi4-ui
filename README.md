@@ -39,6 +39,8 @@ Instale o Raspberry Pi OS usando o Raspberry Pi Image, ele  é a maneira rápida
 
 Assista ao nosso vídeo de 45 segundos para saber como instalar um sistema operacional usando o Raspberry Pi Imager.
 
+https://youtu.be/ntaXWS8Lk34
+
 Baixe e instale o Raspberry Pi Imager em um computador com um leitor de cartão SD. Coloque o cartão SD que você usará com seu Raspberry Pi no leitor e execute o Raspberry Pi Imager.
 
 # Como conectar o Display LCD TFT 3.5″ na Raspberry Pi
