@@ -33,13 +33,30 @@ CraftbeerPi 4 gera notificações em vários eventos. Se você estiver trabalhan
 As notificações também são úteis no caso das etapas de mash, pois informam quando uma etapa é iniciada e, assim que o cronômetro é iniciado, uma mensagem é gerada com o tempo de conclusão previsto da etapa. As notificações também são geradas para alarmes de salto. Eles são exibidos no canto inferior direito da janela do navegador.
 
 
-Instalacão do Raspberry Pi4
+# Instalacão do Raspberry Pi4
 
 Instale o Raspberry Pi OS usando o Raspberry Pi Image, ele  é a maneira rápida e fácil de instalar o Raspberry Pi OS e outros sistemas operacionais em um cartão microSD, pronto para uso com seu Raspberry Pi. 
 
 Assista ao nosso vídeo de 45 segundos para saber como instalar um sistema operacional usando o Raspberry Pi Imager.
 
 Baixe e instale o Raspberry Pi Imager em um computador com um leitor de cartão SD. Coloque o cartão SD que você usará com seu Raspberry Pi no leitor e execute o Raspberry Pi Imager.
+
+# Como conectar o Display LCD TFT 3.5″ na Raspberry Pi
+
+Com o Display LCD TFT Touch 3.5″ tem-se mais mobilidade com Raspberry Pi, já que ele reúne em uma mesma placa as funções de teclado, mouse e display com resolução de 320×480 pixels. 
+
+Acesse o repositório : https://github.com/goodtft/lcd-show   e  clone este repositorio no Raspberry pi. 
+
+Use o comando SSH to connect the Raspberry Pi, e esteja certo que o Raspberry Pi está conectado à Intenet antes de executar os comandos:
+
+sudo rm -rf LCD-show
+git clone https://github.com/goodtft/LCD-show.git
+chmod -R 755 LCD-show
+cd LCD-show/
+
+Siga as instruções do repositorio para escolher o drive conforme o modelo do TFT escolhido.
+
+# Sensores
 
 
 # CraftBeerPi UI 
@@ -59,3 +76,18 @@ python3 setup.py develop
 # Package Plugin 
 
 python3 setup.py sdist
+
+
+# Links Úteis
+
+Links do software
+
+https://openbrewing.gitbook.io/craftbeerpi4_support/
+
+https://github.com/craftbeerpi/craftbeerpi4
+
+https://openbrewing.gitbook.io/craftbeerpi4_support/readme/plugin-installation#plugin-list 
+
+https://web.brewfather.app/tabs/tools
+
+
