@@ -1,8 +1,8 @@
 # Introdução ao CraftBeer
 
-Este repositório é forked do craftbeerpi/craftbeerpi4-ui e tem o objetivo de desenvolver uma versão intencacional do software. 
+Este repositório é forked do craftbeerpi/craftbeerpi4-ui e tem o objetivo de desenvolver uma versão internacional do software. 
 
-Craftbeerpi4 é uma solução de software de código aberto (https://github.com/craftbeerpi/craftbeerpi4) desenvolvida por Manuel Fritsch para controlar a fabricação e talvez mais no futuro fermentação de cerveja. O lado do servidor é baseado em python 3 e o front-end em uma interface react/material UI. 
+Craftbeerpi4 é uma solução de software de código aberto (https://github.com/craftbeerpi/craftbeerpi4) desenvolvida por Manuel Fritsch para controlar a fabricação de cerveja. O lado do servidor é baseado em python 3 e o front-end em uma interface react/material UI. 
 
 O hardware é focado no RapsberryPi 4, pois esta placa possui muitos GPIOs para ler sensores e controlar atuadores. No entanto, também é possível conectar outros sensores e atuadores via conexão http. Portanto, plugins são necessários.
 
