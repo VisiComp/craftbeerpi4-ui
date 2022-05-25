@@ -1,4 +1,4 @@
-# Introdução 
+# Introdução ao CraftBeer
 
 Craftbeerpi4 é uma solução de software de código aberto desenvolvida por Manuel Fritsch para controlar a fabricação e talvez mais no futuro fermentação de cerveja. O lado do servidor é baseado em python 3 e o front-end em uma interface react/material UI. 
 
@@ -60,11 +60,19 @@ Siga as instruções do repositorio para escolher o drive conforme o modelo do T
 
 # Sensores
 
+Sensores utilizados neste projeto.
 
-# CraftBeerPi UI 
+# Acesso à CraftBeerPi UI 
 
-After installation the plugin UI is available under to following url
-http://localhost:8080/cbpi_ui/static/index.html#
+1- Acesso local através de um monitor local do raspberry abra o navegador no endereço:
+
+http://localhost:8000/cbpi_ui/static/index.html#
+
+2- Acesso através da mesma LAN que o Raspberry
+
+http://IP_raspberry:8000/cbpi
+
+
 
 # Build Web App
 
@@ -81,8 +89,6 @@ python3 setup.py sdist
 
 
 # Links Úteis
-
-Links do software
 
 https://openbrewing.gitbook.io/craftbeerpi4_support/
 
