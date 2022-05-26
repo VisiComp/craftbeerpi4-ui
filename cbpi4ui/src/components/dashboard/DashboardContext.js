@@ -3,6 +3,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import SaveIcon from "@material-ui/icons/Save";
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { v4 as uuidv4 } from "uuid";
 import "../../App.css";
 import { useAlert } from "../alert/AlertProvider";
@@ -366,6 +367,7 @@ export const Dashboard = ({ width, height , fixdash}) => {
 
   };
 
+  const { t, i18n } = useTranslation();
 
   return (
     <div>
@@ -396,8 +398,8 @@ export const Dashboard = ({ width, height , fixdash}) => {
             
             <DeleteDialog
         
-            title="Clear Dashboard"
-            message="Do you want to clear the Dashboard"
+            title={t("dashboard_clear_dashboard")}
+            message={t("dashboard_clear_dashboard_text")}
             callback={() => {
               actions.clear(state.dashboardX);
             }}

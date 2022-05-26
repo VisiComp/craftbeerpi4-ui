@@ -204,8 +204,25 @@
     "settings_key_steps_mashin" : "steps_mashin",
     "settings_description_steps_mashin" : "MashIn step type",
     "settings_key_steps_mashout" : "steps_mashout",
-    "settings_description_steps_mashout" : "MashOut step type"
+    "settings_description_steps_mashout" : "MashOut step type",
 
+    "dashboard_layer" : "Layer",
+    "dashboard_properties" : "Properties",
+    "dashboard_settings" :  "Settings",
+
+    "dashboard_properties_Name": "Name",
+    "dashboard_properties_width": "width",
+    "dashboard_properties_heigth": "height",
+    "dashboard_properties_size" : "size",
+    "dashboard_properties_color" : "color",
+    "dashboard_properties_unit" : "unit",
+    "dashboard_properties_height" : "height",
+    "dashboard_properties_refresh" : "refresh",
+    "dashboard_properties_linecolor" : "linecolor",
+    "dashboard_properties_url" : "url",
+    "dashboard_properties_panelID" : "panelID",
+    "dashboard_clear_dashboard" : "Clear Dashboard",
+    "dashboard_clear_dashboard_text" : "Do you want to clear the Dashboard"
 
     
 

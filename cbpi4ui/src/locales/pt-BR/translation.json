@@ -204,8 +204,25 @@
     "settings_key_steps_mashin" : "processo_mashin",
     "settings_description_steps_mashin" : "Tipo de processo de MashIn",
     "settings_key_steps_mashout" : "processo_mashout",
-    "settings_description_steps_mashout" : "Tipo do processo de MashOut"
+    "settings_description_steps_mashout" : "Tipo do processo de MashOut",
 
+    "dashboard_layer" : "Camada",
+    "dashboard_properties" : "Propriedades",
+    "dashboard_settings" :  "Configurações",
+
+    "dashboard_properties_Name": "Nome",
+    "dashboard_properties_width": "largura",
+    "dashboard_properties_heigth": "altura",
+    "dashboard_properties_size" : "tamanho",
+    "dashboard_properties_color" : "cor",
+    "dashboard_properties_unit" : "unidade",
+    "dashboard_properties_height" : "altura",
+    "dashboard_properties_refresh" : "atualizar",
+    "dashboard_properties_linecolor" : "cor da linha",
+    "dashboard_properties_url" : "url",
+    "dashboard_properties_panelID" : "ID do painel",
+    "dashboard_clear_dashboard" : "Limpar Painel de Controle",
+    "dashboard_clear_dashboard_text" : "Você deseja limpar o painel de controle?"
 
 
 

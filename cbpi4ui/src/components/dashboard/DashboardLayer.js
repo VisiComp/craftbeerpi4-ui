@@ -7,6 +7,7 @@ import CropSquareIcon from "@material-ui/icons/CropSquare";
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import React, { useContext, useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useActor } from "../data";
 import ActorSelect from "../util/ActorSelect";
 import KettleSelect from "../util/KettleSelect";
@@ -20,6 +21,7 @@ import { Container, Draggable } from "react-smooth-dnd";
 import DragHandleIcon from "@material-ui/icons/DragHandle";
 import { arrayMove } from "../util/arraymove";
 import { update } from "plotly.js";
+import { t } from "i18next";
 
 const DashboardLayerListItem = ({ item }) => {
   const { state, actions } = useContext(DashboardContext);
@@ -52,10 +54,11 @@ const DashboardLayerList = () => {
     actions.setElements2((current) => [...data])
   };
 
+  const { t, i18n } = useTranslation();
 
   return (
     <>
-      <div className="section_header">Layer</div>
+      <div className="section_header">{t("dashboard_layer")}</div>
       <div
         style={{
           padding: 5,
@@ -93,7 +96,7 @@ const DashboardLayer = () => {
         }}
       >
         <div className="handle">
-          <b>Settings</b>
+          <b>{t("dashboard_settings")}</b>
         </div>
 
         <DashboardLayerList />
@@ -128,9 +131,9 @@ const PropsEditor = ({ data }) => {
 
     switch (s.type) {
       case "text":
-        return <TextField InputProps={unit} label={s.name} key={s.name} fullWidth onChange={(e) => handlechange(e, s.name)} value={data.props[s.name]} />;
+        return <TextField InputProps={unit} label={t('dashboard_properties_'+s.name)} key={s.name} fullWidth onChange={(e) => handlechange(e, s.name)} value={data.props[s.name]} />;
       case "number":
-          return <TextField type="number" InputProps={unit} label={s.name} key={s.name} fullWidth onChange={(e) => handlechange_number(e, s.name)} value={data.props[s.name]} />;
+          return <TextField type="number" InputProps={unit} label={t('dashboard_properties_'+s.name)} key={s.name} fullWidth onChange={(e) => handlechange_number(e, s.name)} value={data.props[s.name]} />;
       case "select":
         return <SelectInput label={s.name} value={data.props[s.name]} key={s.name} onChange={(e) => handlechange(e, s.name)} options={s?.options || []} />;
       case "actor":
@@ -272,12 +275,12 @@ export const DashboardProps = () => {
       return "";
     }
 
-    return <TextField label="Name" fullWidth value={data?.name} onChange={(e) => handleChange(e, "name")} />;
+    return <TextField label={t("name")} fullWidth value={data?.name} onChange={(e) => handleChange(e, "name")} />;
   };
 
   return (
     <div onPointerDown={(e) => e.stopPropagation()}>
-      <div className="section_header">Properties</div>
+      <div className="section_header">{t("dashboard_properties")}</div>
       <div style={{ padding: 10 }}>
         {render_form(data)}
 
