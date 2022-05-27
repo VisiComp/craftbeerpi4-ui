@@ -135,7 +135,7 @@ const PropsEditor = ({ data }) => {
       case "number":
           return <TextField type="number" InputProps={unit} label={t('dashboard_properties_'+s.name)} key={s.name} fullWidth onChange={(e) => handlechange_number(e, s.name)} value={data.props[s.name]} />;
       case "select":
-        return <SelectInput label={s.name} value={data.props[s.name]} key={s.name} onChange={(e) => handlechange(e, s.name)} options={s?.options || []} />;
+        return <SelectInput label={t('dashboard_properties_'+s.name)} value={data.props[s.name]} key={s.name} onChange={(e) => handlechange(e, s.name)} options={s?.options || []} />;
       case "actor":
         return <ActorSelect value={data.props[s.name]} key={s.name} onChange={(e) => handlechange(e, s.name)} />;
       case "sensor":
@@ -229,7 +229,7 @@ const PathSettings = () => {
   const item = state.pathes.find((e) => e.id === selected_id);
 
   // Add a TextField for adding the booleanExpression
-    var helperTextExpression = "sample expression (\"\" are mandatory for identifying actors): (\"actor1\" && \"actor2\") || (\"actor2\" && \"actor3\") \n don't forget the quote";
+    var helperTextExpression = t("dashboard_sample_expression")
    
 
   return (
@@ -242,7 +242,7 @@ const PathSettings = () => {
           overflowY: "scroll",
         }}
       >
-        Flow Left
+        {t("dashboard_flow_left")}
         <List disableGutters={true} dense component="nav" aria-label="main mailbox folders">
           {actor.map((item) => (
             <PathSettingsItem item={item} checked={checked} handleToggle={handleToggle} />
@@ -250,7 +250,7 @@ const PathSettings = () => {
         </List>
         <TextField label="Condition expression for left" helperText={helperTextExpression} fullWidth value={item?.condition?.leftExpression} onChange={(e) => handleChange(e, "left")} />
 
-        Flow Right
+        {t("dashboard_flow_right")}
         <List disableGutters={true} dense component="nav" aria-label="main mailbox folders">
           {actor.map((item) => (
             <PathSettingsItem item={item} checked={checkedRight} handleToggle={(id) => handleToggle(id, "right")} />

@@ -122,16 +122,16 @@ const FermenterProfile = () => {
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Select Fermenter : {" "}
+            {t("select fermenter")} : {" "}
           </Typography> 
           <FermenterSelect value={fermenterid} onChange={onChange} label="" />
         </Grid>
 
         <Grid item>
                     
-          <FermenterDeleteDialog title="Clear" callback={clear} fermenterid={fermenterid} message="Do you want to clear the Fermenter Profile" />
+          <FermenterDeleteDialog title={t("fermenter_clear")} callback={clear} fermenterid={fermenterid} message={t("fermenter_clear_text")} />
           
-          <FermenterSaveDialog title="Save" callback={savetobook} fermenterid={fermenterid} message="Do you want to save your recipe to the recipe book" />
+          <FermenterSaveDialog title={t("save")} callback={savetobook} fermenterid={fermenterid} message={t("fermenter_save_text")} />
           
           <IconButton
             variant="contained"
@@ -153,7 +153,7 @@ const FermenterProfile = () => {
               <div style={{ display: "flex" }}>
                 <FermenterControl fermenterid={fermenterid} />
                 <Button variant="contained" color="primary" startIcon={<AddIcon />} onClick={() => history.push("/fermenterstep/"+fermenterid)}>
-                  ADD
+                  {t("step_add")}
                 </Button>
               </div>
             </Header>
@@ -162,18 +162,18 @@ const FermenterProfile = () => {
                 <TableHead>
                   <TableRow>
                     <TableCell></TableCell>
-                    <TableCell>Name</TableCell>
+                    <TableCell>{t("name")}</TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      Type
+                      {t("type")}
                     </TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      Summary
+                      {t("summary")}
                     </TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      State
+                      {t("state")}
                     </TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      Actions
+                      {t("actions")}
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -194,7 +194,7 @@ const FermenterProfile = () => {
                         <StepStateChip state={row.status} />
                       </TableCell>
                       <TableCell align="right" className="hidden-xs">
-                        <FermenterDeleteDialog title="Delete Step" message="Do you want to delete the step" fermenterid={fermenterid} id={row.id} callback={remove_callback} />
+                        <FermenterDeleteDialog title={t("delete_step")} message={t("delete_step_text")} fermenterid={fermenterid} id={row.id} callback={remove_callback} />
                         
                         <IconButton aria-label="add" size="small" onClick={() => history.push("/fermenterstep/" + row.id + "/" + fermenterid)}>
                           <VisibilityIcon />

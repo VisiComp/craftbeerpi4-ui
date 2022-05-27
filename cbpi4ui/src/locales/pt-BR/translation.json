@@ -35,6 +35,18 @@
     "description" : "Descrição",
     "no name" : "SEM NOME",
     "no type" : "SEM TIPO",
+    "by" : "por",
+    "add" : "ADCIONAR",
+    "summary" : "Resumo",
+    "delete_step" : "Apagar Processo",
+    "delete_step_text" : "Você quer apagar esse processo?",
+    "step_config" : "Configuração de processo",
+    "step_add" : "adcionar",
+    "mashprofile_clear_text" : "Você deseja limpar o Perfil de Mostura" ,
+    "mashprofile_clear" : "Limpar",
+    "mashprofile_save_text" : "Você deseja salvar sua receita no livro de receitas?",
+    "profile" : "Perfil",
+
 
     "dashboard" : "Painel de Controle",
     "mash profile" : "Perfil de Mostura",
@@ -60,6 +72,9 @@
     "value" : "Valor",
     "delete logs" : "Apagar Registros",
     "delete logs text" : "Você deseja apagar os registros selecionados?",
+    "fermenter_clear" : "Limpar",
+    "fermenter_clear_text" : "Você deseja limpar o Perfil de fermentadora" ,
+    "fermenter_save_text" : "Você deseja salvar sua receita no livro de receitas?",
 
     "kettle" : "Caldeira",
     "logic" : "Logica",
@@ -222,7 +237,29 @@
     "dashboard_properties_url" : "url",
     "dashboard_properties_panelID" : "ID do painel",
     "dashboard_clear_dashboard" : "Limpar Painel de Controle",
-    "dashboard_clear_dashboard_text" : "Você deseja limpar o painel de controle?"
+    "dashboard_clear_dashboard_text" : "Você deseja limpar o painel de controle?",
+    "dashboard_properties_diameter" : "diametro",
+    "dashboard_calculator" : "Calculadora",
+    "dashboard_volume_calculator" : "Calculadora de Volume",
+    "dashboard_properties_maxvalue" : "valor maximo",
+    "dashboard_flow_left" : "Fluxo Esquerdo",
+    "dashboard_flow_right" : "Fluxo Direito",
+    "dashboard_condition_left" : "Expressão de condição para a esquerda",
+    "dashboard_condition_right" : "Expressão de condição para a direita",
+    "dashboard_sample_expression" : "expressão de exemplo (\"\" são obrigatorios para identificar atuadores): (\"actor1\" && \"actor2\") || (\"actor2\" && \"actor3\") \n não esqueça a citação",
+    "dashboard_config_missing" : "Configuração Ausente",
+    "dashboard_missing_config" : "Configuração Ausente",
+    "svg_missing_config" : "CONFIGURAÇÃO AUSENTE",
+    "chart" : "Grafico",
+    "close" : "Fechar",
+    "submit" : "Enviar",
+    "mash steps" : "Etapas de Mostura",
+
+    "state_active" : "Ativo",
+    "state_inactive" : "Inativo",
+    "state_pause" : "Pausa",
+    "state_error" : "Erro",
+    "state_done" : "Feito"
 
 
 

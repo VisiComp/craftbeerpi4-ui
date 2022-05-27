@@ -1,5 +1,6 @@
 import { TextField, Typography } from "@material-ui/core";
 import { useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useDraggable, useModel } from "../DashboardContext";
 
 export const Calculator = ({ id }) => {
@@ -12,10 +13,12 @@ export const Calculator = ({ id }) => {
     setDiameter(model.props.diameter);
   }, [model.props.diameter]);
 
+  const { t, i18n } = useTranslation();
+
   if (draggable) {
     return (
       <div className="box" style={{ width: 100, height: 150, display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <Typography variant="h6">Calculator</Typography>
+        <Typography variant="h6">{t("dashboard_calculator")}</Typography>
       </div>
     );
   }
@@ -24,7 +27,7 @@ export const Calculator = ({ id }) => {
     const value = parseFloat((Math.PI * radius * radius * (height - fromTop)) / 1000.0).toFixed(2);
     return (
       <div className="box" style={{ width: 120, padding: 5 }}>
-        Volume Calculator
+        {t("dashboard_volume_calculator")}
         <div>
           {height} H / {diameter} D
         </div>
@@ -38,7 +41,7 @@ export const Calculator = ({ id }) => {
     const value = parseFloat((Math.PI * radius * radius * height) / 1000.0).toFixed(2);
     return (
       <div className="box" style={{ width: 100 }}>
-        Volume Calculator
+        {t("dashboard_volume_calculator")}
         <TextField label="Diameter" fullWidth value={diameter} onChange={(e) => setDiameter(e.target.value)} type="number" />
         <TextField label="Height" fullWidth value={height} onChange={(e) => setHeight(e.target.value)} type="number" />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>

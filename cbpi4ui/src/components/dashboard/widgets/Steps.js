@@ -15,6 +15,7 @@ import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import { default as React, useContext, useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useCBPi } from "../../data";
 import { stepapi } from "../../data/stepapi";
 import ActorName from "../../util/ActorName";
@@ -25,6 +26,8 @@ import SensorName from "../../util/SensorName";
 import { DashboardContext, useDraggable, useModel } from "../DashboardContext";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 import { useHistory } from "react-router-dom";
+
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
@@ -41,6 +44,8 @@ const StepProps = ({ config, data }) => {
   if (!config) {
     return <></>;
   }
+
+  
 
   return config.map((e, index) => {
     switch (e.type) {
@@ -92,6 +97,8 @@ const StepActionDialog = ({ action, config, open, onClose, onSubmit }) => {
     setProps({ ...props, [name]: value });
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <Dialog open={open} fullWidth>
       <DialogTitle id="simple-dialog-title">{action.label}</DialogTitle>
@@ -104,10 +111,10 @@ const StepActionDialog = ({ action, config, open, onClose, onSubmit }) => {
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose} variant="contained" color="secondary" autoFocus>
-          Close
+          {t("close")}
         </Button>
         <Button onClick={() => onSubmit(props)} variant="contained" color="Primary" autoFocus>
-          Submit
+          {t("submit")}
         </Button>
       </DialogActions>
     </Dialog>
@@ -168,6 +175,8 @@ function StepDetailsDialog(props) {
     setActions(t?.actions || []);
   }, [state.stepTypes]);
 
+  const { t, i18n } = useTranslation();
+
   return (
     <Dialog fullWidth onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
       <DialogContent>
@@ -176,7 +185,7 @@ function StepDetailsDialog(props) {
             {item.name}
           </Typography>
           <Typography variant="h6" gutterBottom>
-            Parameter
+            {t("parameter")}
           </Typography>
           <Grid container spacing={3}>
             <StepProps config={type.properties} data={item.props} />
@@ -185,14 +194,14 @@ function StepDetailsDialog(props) {
         <Divider />
         <Paper className={classes.paper}>
           <Typography variant="h6" gutterBottom>
-            Actions
+            {t("actions")}
           </Typography>
           <StepActionList item={item} type={type} />
         </Paper>
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} variant="contained" color="secondary" autoFocus>
-          Close
+          {t("close")}
         </Button>
       </DialogActions>
     </Dialog>
@@ -267,11 +276,13 @@ export const Steps = ({ id }) => {
     setProfile(state.mashProfile);
   }, [state.mashProfile]);
 
+  const { t, i18n } = useTranslation();
+
   let inputStyle = { color: "#fff", width: `${model?.props?.width}px`,fontSize: `${model?.props?.namesize}pt`, backgroundColor: "#2c282e", padding: 5, borderRadius: 5 };
 
   if( draggable) {
     return <div className="box" style={{...inputStyle, display:"flex", justifyContent: "center", alignItems: "center"}}>
-      <Typography variant="h6">Mash Steps</Typography>
+      <Typography variant="h6">{t("mash steps")}</Typography>
     </div>
   }
 
@@ -286,7 +297,7 @@ export const Steps = ({ id }) => {
           }}
           startIcon={<MenuBookIcon />}
         >
-          Please select a Recipe
+          {t("please select a recipe")}
         </Button>
       </div>
     );

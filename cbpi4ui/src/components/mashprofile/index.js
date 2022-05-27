@@ -83,16 +83,16 @@ const MashProfile = () => {
           <Typography variant="h5" gutterBottom>
             {state.mashBasic.name}{" "}
             <Typography display="inline" color="textSecondary">
-              by {state.mashBasic.author}
+              {t("by")} {state.mashBasic.author}
             </Typography>
           </Typography>
           <Typography color="textSecondary">{state.mashBasic.desc}</Typography>
         </Grid>
         <Grid item>
           
-          <DeleteDialog title="Clear" callback={clear} message="Do you want to clear the Mash Profile" />
+          <DeleteDialog title={t("mashprofile_clear")} callback={clear} message={t("mashprofile_clear_text")} />
           
-          <SaveDialog title="Save" callback={savetobook} message="Do you want to save your recipe to the recipe book" />
+          <SaveDialog title={t("save")} callback={savetobook} message={t("mashprofile_save_text")} />
           
           <IconButton
             variant="contained"
@@ -110,11 +110,11 @@ const MashProfile = () => {
       <Grid container spacing={3}>
         <Grid item sm={12}>
           <Paper className={classes.paper}>
-            <Header title="Profile">
+            <Header title={t("profile")}>
               <div style={{ display: "flex" }}>
                 <MashControl />
                 <Button variant="contained" color="primary" startIcon={<AddIcon />} onClick={() => history.push("/step")}>
-                  ADD
+                  {t("add")}
                 </Button>
               </div>
             </Header>
@@ -123,18 +123,18 @@ const MashProfile = () => {
                 <TableHead>
                   <TableRow>
                     <TableCell></TableCell>
-                    <TableCell>Name</TableCell>
+                    <TableCell>{t("name")}</TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      Type
+                      {t("type")}
                     </TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      Summary
+                      {t("summary")}
                     </TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      State
+                      {t("state")}
                     </TableCell>
                     <TableCell align="right" className="hidden-xs">
-                      Actions
+                      {t("actions")}
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -155,7 +155,7 @@ const MashProfile = () => {
                         <StepStateChip state={row.status} />
                       </TableCell>
                       <TableCell align="right" className="hidden-xs">
-                        <DeleteDialog title="Delete Step" message="Do you want to delete the step" id={row.id} callback={remove_callback} />
+                        <DeleteDialog title={t("delete_step")} message={t("delete_step_text")} id={row.id} callback={remove_callback} />
                         
                         <IconButton aria-label="add" size="small" onClick={() => history.push("/step/" + row.id)}>
                           <VisibilityIcon />

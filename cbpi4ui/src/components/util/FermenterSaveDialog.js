@@ -7,6 +7,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import IconButton from "@material-ui/core/IconButton";
 import SaveIcon from "@material-ui/icons/Save";
 import React from "react";
+import {useTranslation} from 'react-i18next';
+
 
 const FermenterSaveDialog = ({ btnText, title, message, callback, fermenterid, id }) => {
   const [open, setOpen] = React.useState(false);
@@ -23,6 +25,8 @@ const FermenterSaveDialog = ({ btnText, title, message, callback, fermenterid, i
     setOpen(false);
     callback(fermenterid, id);
   };
+
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -43,10 +47,10 @@ const FermenterSaveDialog = ({ btnText, title, message, callback, fermenterid, i
         </DialogContent>
         <DialogActions>
           <Button onClick={no} color="secondary" autoFocus variant="contained">
-            No
+            {t("no")}
           </Button>
           <Button onClick={yes} color="primary" variant="contained">
-            Yes
+            {t("yes")}
           </Button>
         </DialogActions>
       </Dialog>

@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { useContext, useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useHistory, useParams } from "react-router-dom";
 import { useAlert } from "../alert/AlertProvider";
 import { CBPiContext, useCBPi } from "../data";
@@ -124,10 +125,12 @@ const FermenterStepForm = () => {
     }
   }, [state.fermenter]);
 
+
+  const { t, i18n } = useTranslation();
   return (
     <>
       <Typography variant="h6" gutterBottom>
-        Step Config
+        {t("step_config")}
       </Typography>
       <Breadcrumbs aria-label="breadcrumb">
         <Link
@@ -136,7 +139,7 @@ const FermenterStepForm = () => {
             history.push("/fermenterprofile/"+fermenterid);
           }}
         >
-          Fermenter Profile
+          {t("fermenter profile")}
         </Link>
         <Typography color="textPrimary">{name}</Typography>
       </Breadcrumbs>
@@ -145,7 +148,7 @@ const FermenterStepForm = () => {
       <Paper className={classes.paper}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
-            <TextField required id="name" label="Name" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
+            <TextField required id="name" label={t("name")} fullWidth value={name} onChange={(e) => setName(e.target.value)} />
           </Grid>
           <Grid item xs={12} md={6}>
             <FermenterStepTypeSelct value={type} onChange={onSelectType} />
@@ -162,7 +165,7 @@ const FermenterStepForm = () => {
             }}
             className={classes.button}
           >
-            Cancel
+            {t("cancel")}
           </Button>
           <Button
             variant="contained"
@@ -172,7 +175,7 @@ const FermenterStepForm = () => {
             }}
             className={classes.button}
           >
-            Save
+            {t("save")}
           </Button>
         </div>
       </Paper>

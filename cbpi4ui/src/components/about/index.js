@@ -41,9 +41,9 @@ const About = () => {
           <Paper style={{ padding: 10 }}>
             {t('this is cbpi')} {state.version} | {t('codename')} {state.codename})
             <p>{t("description about")}</p>
-            Website: http://www.CraftBeerPi.com <br />
-            GitHub: http://github.com/manuel83 <br />
-            Facebook: http://github.com/groups/craftbeerpi<br />
+            {t("about_website")}<br />
+            {t("about_github")} <br />
+            {t("about_facebook")}<br />
             <br />
             {t('github fork')} <br />
             {t('openbrewing documentation')} <Button color="primary" target="_blank" href="https://openbrewing.gitbook.io/craftbeerpi4_support/" rel="noreferrer noopener">{t('link to documentation')}</Button>

@@ -35,6 +35,20 @@
     "description" : "Description",
     "no name" : "NO NAME",
     "no type" : "NO TYPE",
+    "by" : "by",
+    "add" : "ADD",
+    "summary" : "Summary",
+    "delete_step" : "Delete Step",
+    "delete_step_text" : "Do you want to delete the step",
+    "step_config" : "Step Config",
+    "step_add" : "add",
+    "mashprofile_clear_text" : "Do you want to clear the Mash Profile" ,
+    "mashprofile_clear" : "Clear",
+    "mashprofile_save_text" : "Do you want to save your recipe to the recipe book",
+    "profile" : "Profile",
+
+
+    
 
     "dashboard" : "Dashboard",
     "mash profile" : "Mash Profile",
@@ -60,6 +74,9 @@
     "value" : "Value",
     "delete logs" : "Delete Logs",
     "delete logs text" : "Do you want to delete the selected logs?",
+    "fermenter_clear" : "Clear",
+    "fermenter_clear_text" : "Do you want to clear the Fermenter Profile" ,
+    "fermenter_save_text" : "Do you want to save your recipe to the recipe book",
 
     "kettle" : "Kettle",
     "logic" : "Logic",
@@ -222,7 +239,29 @@
     "dashboard_properties_url" : "url",
     "dashboard_properties_panelID" : "panelID",
     "dashboard_clear_dashboard" : "Clear Dashboard",
-    "dashboard_clear_dashboard_text" : "Do you want to clear the Dashboard"
+    "dashboard_clear_dashboard_text" : "Do you want to clear the Dashboard",
+    "dashboard_properties_diameter" : "diameter",
+    "dashboard_calculator" : "Calculator",
+    "dashboard_volume_calculator" : "Volume Calculator",
+    "dashboard_properties_maxvalue" : "maxvalue",
+    "dashboard_flow_left" : "Flow Left",
+    "dashboard_flow_right" : "Flow Right",
+    "dashboard_condition_left" : "Condition expression for left",
+    "dashboard_condition_right" : "Condition expression for right",
+    "dashboard_sample_expression" : "sample expression (\"\" are mandatory for identifying actors): (\"actor1\" && \"actor2\") || (\"actor2\" && \"actor3\") \n don't forget the quote",
+    "dashboard_config_missing" : "Config Missing",
+    "dashboard_missing_config" : "Missing Config",
+    "svg_missing_config" : "MISSING CONFIG",
+    "chart" : "Chart",
+    "close" : "Close",
+    "submit" : "Submit",
+    "mash steps" : "Mash Steps",
+
+    "state_active" : "Active",
+    "state_inactive" : "Inactive",
+    "state_pause" : "Pause",
+    "state_error" : "Error",
+    "state_done" : "Done"
 
     
 

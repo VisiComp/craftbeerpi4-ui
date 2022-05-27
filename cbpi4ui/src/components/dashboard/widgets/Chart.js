@@ -1,18 +1,21 @@
 import { ClickAwayListener, Dialog, DialogTitle, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Paper, Popper } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { useEffect, useRef, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import Plot from "react-plotly.js";
 import { logapi } from "../../data/logapi";
 import { useDraggable, useModel } from "../DashboardContext";
 import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import DeleteIcon from "@material-ui/icons/Delete";
+import { t } from "i18next";
 
 
 const ContextMenu = ({ open, handleClose, doRefresh }) => {
+  const { t, i18n } = useTranslation();
   return <Dialog open={open} onClose={handleClose} aria-labelledby="simple-dialog-title">
 
-<DialogTitle id="simple-dialog-title">Chart</DialogTitle>
+<DialogTitle id="simple-dialog-title">{t("chart")}</DialogTitle>
       
   </Dialog>;
 };
@@ -64,6 +67,8 @@ const Chart = ({ id }) => {
     logapi.clear(model?.props?.sensor, ()=>setData([]))
   }
 
+  const { t, i18n } = useTranslation();
+
   if (draggable === true) {
     let css_style2 = {
       display: "flex",
@@ -76,14 +81,14 @@ const Chart = ({ id }) => {
     };
     return (
       <div className="box" style={css_style2}>
-        <div>Chart {model.name}</div>
+        <div>{t("chart")} {model.name}</div>
         <div>{!model?.props?.sensor ? "Missing Config" : ""}</div>
       </div>
     );
   }
 
   if (!model?.props?.sensor) {
-    return <div>Config Missing</div>;
+    return <div>{t("dashboard_config_missing")}</div>;
   }
 
   return (
