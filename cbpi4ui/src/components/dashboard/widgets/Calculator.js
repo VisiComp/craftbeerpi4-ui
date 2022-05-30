@@ -42,8 +42,8 @@ export const Calculator = ({ id }) => {
     return (
       <div className="box" style={{ width: 100 }}>
         {t("dashboard_volume_calculator")}
-        <TextField label="Diameter" fullWidth value={diameter} onChange={(e) => setDiameter(e.target.value)} type="number" />
-        <TextField label="Height" fullWidth value={height} onChange={(e) => setHeight(e.target.value)} type="number" />
+        <TextField label={t("vcalculator_diameter")} fullWidth value={diameter} onChange={(e) => setDiameter(e.target.value)} type="number" />
+        <TextField label={t("vcalculator_height")} fullWidth value={height} onChange={(e) => setHeight(e.target.value)} type="number" />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
           <Typography variant="h6">{value}L</Typography>
         </div>

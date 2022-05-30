@@ -4,14 +4,16 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import { useContext } from "react";
+import {useTranslation} from 'react-i18next';
 import { CBPiContext } from "../data";
 
  const StepTypeSelect = ({label="Logic", value, onChange, }) => {
     const { state } = useContext(CBPiContext);
+    const { t, i18n } = useTranslation();
 
     return <>
         <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-            {label}
+            {t('StepTypeSelect_' + label)}
      </InputLabel>
         <Select fullWidth
             name="type"

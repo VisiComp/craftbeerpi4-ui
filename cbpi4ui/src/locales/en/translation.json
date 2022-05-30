@@ -46,6 +46,7 @@
     "mashprofile_clear" : "Clear",
     "mashprofile_save_text" : "Do you want to save your recipe to the recipe book",
     "profile" : "Profile",
+    
 
 
     
@@ -256,14 +257,43 @@
     "close" : "Close",
     "submit" : "Submit",
     "mash steps" : "Mash Steps",
+    "dashboard_properties_stepsize" : "stepsize",
+    "dashboard_properties_namesize" : "namesize",
+    "dashboard_properties_action" : "action",
+    "dashboard_properties_showDate" : "showDate",
+    "dashboard_properties_format" : "format",
+    "dashboard_properties_orientation" : "orientation",
+    "dashboard_properties_type" : "type",
+    "vcalculator_diameter" : "Diameter",
+    "vcalculator_height" : "Height",
+    "dashboard_properties_Kettle" : "Kettle",
+    "dashboard_properties_Tank" : "Tank",
+    "dashboard_properties_Text" : "Text",
+    "dashboard_properties_TargetTemp" : "TargetTemp",
+    "dashboard_properties_Sensor Data" : "Sensor Data",
+    "dashboard_properties_Actor" : "Actor",
+    "dashboard_properties_Led" : "Led",
+    "dashboard_properties_Steps" : "Steps",
+    "dashboard_properties_SVG" : "SVG",
+    "dashboard_properties_KettleControl" : "KettleControl",
+    "dashboard_properties_Clock" : "Clock",
+    "dashboard_properties_Chart" : "Chart",
+    "dashboard_properties_GrafanaChart" : "GrafanaChart",
+    "dashboard_properties_Calculator" : "Calculator",
+    "dashboard_properties_Liquid" : "Liquid",
+    "dashboard_properties_FermenterTargetTemp" : "FermenterTargetTemp",
+    "dashboard_properties_FermenterTargetPressure" : "FermenterTargetPressure",
+    "dashboard_properties_FermenterControl" : "FermenterControl",
+    "dashboard_properties_FermenterSteps" : "FermenterSteps",
 
     "state_active" : "Active",
     "state_inactive" : "Inactive",
     "state_pause" : "Pause",
     "state_error" : "Error",
-    "state_done" : "Done"
+    "state_done" : "Done",
 
-    
+    "StepTypeSelect_MashStep" : "MashStep",
+    "StepTypeSelect_Logic" : "Logic"
 
     
     }

@@ -46,6 +46,7 @@
     "mashprofile_clear" : "Limpar",
     "mashprofile_save_text" : "Você deseja salvar sua receita no livro de receitas?",
     "profile" : "Perfil",
+    
 
 
     "dashboard" : "Painel de Controle",
@@ -254,13 +255,44 @@
     "close" : "Fechar",
     "submit" : "Enviar",
     "mash steps" : "Etapas de Mostura",
+    "dashboard_properties_stepsize" : "tamanho dos passos",
+    "dashboard_properties_namesize" : "tamanho do nome",
+    "dashboard_properties_action" : "ação",
+    "dashboard_properties_showDate" : "mostrar data",
+    "dashboard_properties_format" : "formato",
+    "dashboard_properties_orientation" : "orientação",
+    "vcalculator_diameter" : "Diametro",
+    "vcalculator_height" : "Altura",
+    "dashboard_properties_Kettle" : "Caldeira",
+    "dashboard_properties_Tank" : "Tanque",
+    "dashboard_properties_Text" : "Texto",
+    "dashboard_properties_TargetTemp" : "TemperaturaAlvo",
+    "dashboard_properties_Sensor Data" : "Dados do Sensor",
+    "dashboard_properties_Actor" : "Atuador",
+    "dashboard_properties_Led" : "Led",
+    "dashboard_properties_Steps" : "Processos",
+    "dashboard_properties_SVG" : "SVG",
+    "dashboard_properties_KettleControl" : "ControleDaCaldeira",
+    "dashboard_properties_Clock" : "Relogio",
+    "dashboard_properties_Chart" : "Grafico",
+    "dashboard_properties_GrafanaChart" : "GraficoGrafana",
+    "dashboard_properties_Calculator" : "Calculadora",
+    "dashboard_properties_Liquid" : "Liquido",
+    "dashboard_properties_FermenterTargetTemp" : "TemperaturaAlvoFermentadora",
+    "dashboard_properties_FermenterTargetPressure" : "PressãoAlvoFermentadora",
+    "dashboard_properties_FermenterControl" : "ControleDaFermentadora",
+    "dashboard_properties_FermenterSteps" : "ProcessosDaFermentadora",
+
+    
 
     "state_active" : "Ativo",
     "state_inactive" : "Inativo",
     "state_pause" : "Pausa",
     "state_error" : "Erro",
-    "state_done" : "Feito"
+    "state_done" : "Feito",
 
-
+    "StepTypeSelect_MashStep" : "MashStep",
+    "StepTypeSelect_Logic" : "Logica"
+    
 
     }

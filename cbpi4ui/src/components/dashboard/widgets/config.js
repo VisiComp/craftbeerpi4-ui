@@ -26,10 +26,9 @@ import { FermenterTargetTemp , FermenterTargetPressure} from "./FermenterTargetT
 import { FermenterSteps } from './FermenterSteps';
 import { Text } from "./Text";
 
-
-
 export const widget_list = [
   
+ 
 
   {
     name: "Kettle",
