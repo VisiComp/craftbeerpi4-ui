@@ -248,7 +248,7 @@ const PathSettings = () => {
             <PathSettingsItem item={item} checked={checked} handleToggle={handleToggle} />
           ))}
         </List>
-        <TextField label="Condition expression for left" helperText={helperTextExpression} fullWidth value={item?.condition?.leftExpression} onChange={(e) => handleChange(e, "left")} />
+        <TextField label={t("dashboard_condition_left")} helperText={helperTextExpression} fullWidth value={item?.condition?.leftExpression} onChange={(e) => handleChange(e, "left")} />
 
         {t("dashboard_flow_right")}
         <List disableGutters={true} dense component="nav" aria-label="main mailbox folders">
@@ -256,7 +256,7 @@ const PathSettings = () => {
             <PathSettingsItem item={item} checked={checkedRight} handleToggle={(id) => handleToggle(id, "right")} />
           ))}
         </List>
-        <TextField label="Condition expression for right" helperText={helperTextExpression} fullWidth value={item?.condition?.rightExpression} onChange={(e) => handleChange(e, "right")} />
+        <TextField label={t("dashboard_condition_right")} helperText={helperTextExpression} fullWidth value={item?.condition?.rightExpression} onChange={(e) => handleChange(e, "right")} />
       </div>
     </>
   );

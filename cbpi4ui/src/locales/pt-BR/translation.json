@@ -47,8 +47,6 @@
     "mashprofile_save_text" : "Você deseja salvar sua receita no livro de receitas?",
     "profile" : "Perfil",
     
-
-
     "dashboard" : "Painel de Controle",
     "mash profile" : "Perfil de Mostura",
     "fermenter profile" : "Perfil da Fermentadora",
@@ -261,6 +259,7 @@
     "dashboard_properties_showDate" : "mostrar data",
     "dashboard_properties_format" : "formato",
     "dashboard_properties_orientation" : "orientação",
+    "dashboard_properties_type" : "tipo",
     "vcalculator_diameter" : "Diametro",
     "vcalculator_height" : "Altura",
     "dashboard_properties_Kettle" : "Caldeira",
@@ -283,16 +282,60 @@
     "dashboard_properties_FermenterControl" : "ControleDaFermentadora",
     "dashboard_properties_FermenterSteps" : "ProcessosDaFermentadora",
 
-    
-
     "state_active" : "Ativo",
     "state_inactive" : "Inativo",
     "state_pause" : "Pausa",
     "state_error" : "Erro",
     "state_done" : "Feito",
 
-    "StepTypeSelect_MashStep" : "MashStep",
-    "StepTypeSelect_Logic" : "Logica"
+    "propsedit_Target temperature for cooldown. Notification will be send when temp is reached and Actor can be triggered" : "Temperatura alvo para resfriamento. A notificação será enviada quando a temperatura for atingida e o Atuador puder ser acionado",
+    "propsedit_Sensor that is used during cooldown" : "Sensor que é usado para o resfriamento",
+    "propsedit_Actor can trigger a valve for the cooldwon to target temperature" : "O atuador pode acionar uma válvula para o resfriamento atingir a temperatura alvo",
+    "propsedit_Temp" : "Temperatura",
+    "propsedit_Boil temperature" : "Temperatura de Fervura",
+    "propsedit_Timer" : "Cronometro",
+    "propsedit_Time in Minutes" : "Tempo em minutos",
+    "propsedit_LidAlert" : "AlertaTampa",
+    "propsedit_Trigger Alert to remove lid if temp is close to boil" : "Dispara alerta para remover a tampa se a temperatura estiver próxima de ferver",
+    "propsedit_AutoMode" : "AutoMode",
+    "propsedit_Switch Kettlelogic automatically on and off -> Yes" :  "Switch Kettlelogic automatically on and off -> Yes",
+    "propsedit_First_Wort" : "Primeiro_Mosto",
+    "propsedit_First Wort Hop alert if set to Yes" : "First Wort Hop alert if set to Yes",
+    "propsedit_Hop_1" : "Hop_1",
+    "propsedit_First Hop alert (minutes before finish)" : "First Hop alert (minutes before finish)",
+    "propsedit_Hop_2" : "Hop_2",
+    "propsedit_Second Hop alert (minutes before finish)" : "Second Hop alert (minutes before finish)",
+    "propsedit_Hop_3" : "Hop_3",
+    "propsedit_Third Hop alert (minutes before finish)" : "Third Hop alert (minutes before finish)",
+    "propsedit_Hop_4" : "Hop_4",
+    "propsedit_Fourth Hop alert (minutes before finish)" : "Fourth Hop alert (minutes before finish)",
+    "propsedit_Hop_5" : "Hop_5",
+    "propsedit_Fifth Hop alert (minutes before finish)" : "Fifth Hop alert (minutes before finish)",
+    "propsedit_Hop_6" : "Hop_6",
+    "propsedit_Sixth Hop alert (minutes before finish)" : "Sixth Hop alert (minutes before finish)",
+    "propsedit_" : "",
+    "propsedit_Notification" : "Notificação",
+    "propsedit_Text for notification when Temp is reached" : "Texto para notificação quando a Temperatura desejada é atingida",
+    "propsedit_toggle_type" : "Tipo_de_alternancia",
+    "propsedit_Choose if Actor should be switched on or off in this step" : "Escolha se o Atuador deve ser ligado ou desligado nesta etapa",
+    "propsedit_Actor that should be toggled during this step" : "Actor that should be toggled during this step",
+    "propsedit_AutoNext" : "ContinuarAutomaticamente",
+    "propsedit_Automatically move to next step (Yes) or pause after Notification (No)" : "Mover automaticamente para a próxima etapa (Sim) ou pausar após a Notificação (Não)",
+    "propsedit_Text for notification" : "Texto para notificação",
+    "propsedit_Yes" : "Sim",
+    "propsedit_No" : "Não",
+    "propsedit_On" : "Ligado",
+    "propsedit_Off" : "Desligado",
+    
+    "StepTypeSelect_Logic" : "Logica",
+    "StepTypeSelect_MashStep" : "Etapa De Mostura",
+    "StepTypeSelect_BoilStep" : "Etapa De Fervura",
+    "StepTypeSelect_WaitStep" : "Etapa De Espera",
+    "StepTypeSelect_MashInStep" : "MashInStep",
+    "StepTypeSelect_CooldownStep" : "Etapa de resfriamento",
+    "StepTypeSelect_ToggleStep" : "ToggleStep",
+    "StepTypeSelect_ActorStep" : "Etapa do Atuador",
+    "StepTypeSelect_NotificationStep" : "Etapa De Notificação"
     
 
     }

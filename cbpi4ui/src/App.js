@@ -32,6 +32,7 @@ import logo from "./images/cbpi_no_border.png";
 import usflag from "./images/usa_flag.png";
 import brflag from "./images/brasil_flag.png";
 import gerflag from "./images/ger_flag.png";
+import spainflag from "./images/spain_flag.png";
 import StepForm from "./components/mashprofile/StepForm";
 import FermenterStepForm from "./components/fermenterprofile/FermenterStepForm";
 import Recipes from "./components/recipes";
@@ -169,6 +170,7 @@ const CraftBeerPiApp = () => {
                   <img src={usflag} id="usaflag" onClick={changeLanguage("en")}/>
                   <img src={brflag} id="brasilflag" onClick={changeLanguage("ptbr")}/>
                   <img src={gerflag} id="germanyflag"/>
+                  <img src={spainflag} id="spain-flag"/>
                 </div>
                 <IconButton color="inherit">
                   <Badge badgeContent={0} color="secondary">

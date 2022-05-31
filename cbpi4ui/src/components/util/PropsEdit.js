@@ -4,8 +4,10 @@ import ActorSelect from "./ActorSelect";
 import KettleSelect from "./KettleSelect";
 import FermenterSelect from "./FermenterSelect";
 import SensorSelect from "./SensorSelect";
+import {useTranslation} from 'react-i18next';
 
 const SelectInput = ({ label, description="", options=[], value, onChange }) => {
+  const { t, i18n } = useTranslation();
     return (
       <>
         <InputLabel shrink id="demo-simple-select-placeholder-label-label">
@@ -15,7 +17,7 @@ const SelectInput = ({ label, description="", options=[], value, onChange }) => 
         <MenuItem key="actor-non" value="">---</MenuItem>
           {options.map((item) => (
             <MenuItem key={item} value={item}>
-              {item}
+              {t("propsedit_"+item)}
             </MenuItem>
           ))}
         </Select>
@@ -26,30 +28,31 @@ const SelectInput = ({ label, description="", options=[], value, onChange }) => 
 
 
 const PropsEdit = ({ config, onChange = () => {}, data={}}) => {
+  const { t, i18n } = useTranslation();
   useEffect(() => {}, [config, data]);
   //console.log(config)
   if (!config) {
     return <></>;
   }
-  
+ 
   const render_input = (item) => {
    
     switch (item.type) {
       case "select":
         //console.log(1,item.description)
-        return <SelectInput description={item.description} label={item.label} options={item.options} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
+        return <SelectInput description={t("propsedit_")+item.description} label={t("propsedit_"+item.label)} options={item.options} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "kettle":
         return <KettleSelect description={item.description} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "fermenter":
         return <FermenterSelect description={item.description} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "sensor":
-        return <SensorSelect description={item.description} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
+        return <SensorSelect description={t("propsedit_"+item.description)} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "actor":
-        return <ActorSelect description={item.description} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
+        return <ActorSelect description={t("propsedit_"+item.description)} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "number":
-        return <TextField helperText={item.description}  value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} type="number" label={item.label} fullWidth helperText={item.description}/>;
+        return <TextField helperText={t("propsedit_"+item.description)}  value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} type="number" label={t("propsedit_"+item.label)} fullWidth helperText={t("propsedit_"+item.description)}/>;
       default:
-        return <TextField helperText={item.description} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} label={item.label} fullWidth helperText={item.description}/>;
+        return <TextField helperText={t("propsedit_"+item.description)} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} label={t("propsedit_"+item.label)} fullWidth helperText={t("propsedit_"+item.description)}/>;
     }
   };
 

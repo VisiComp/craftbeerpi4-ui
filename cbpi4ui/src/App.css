@@ -91,3 +91,9 @@ align-items: center;
   margin-right: 3%;
   cursor: pointer;
 }
+
+#spain-flag{
+  height: 5vmin;
+  margin-right: 5%;
+  cursor: pointer;
+}

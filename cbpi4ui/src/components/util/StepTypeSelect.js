@@ -22,7 +22,7 @@ import { CBPiContext } from "../data";
             value={value}
             onChange={onChange}>
                 <MenuItem  key="none" value="">---</MenuItem>
-            {state.stepTypes.map((item) => <MenuItem  key={item.name} value={item.name}>{item.name}</MenuItem>)}
+            {state.stepTypes.map((item) => <MenuItem  key={item.name} value={item.name}>{t("StepTypeSelect_"+item.name)}</MenuItem>)}
         </Select>
     </>
 }

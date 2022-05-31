@@ -47,10 +47,6 @@
     "mashprofile_save_text" : "Do you want to save your recipe to the recipe book",
     "profile" : "Profile",
     
-
-
-    
-
     "dashboard" : "Dashboard",
     "mash profile" : "Mash Profile",
     "fermenter profile" : "Fermenter Profile",
@@ -292,8 +288,58 @@
     "state_error" : "Error",
     "state_done" : "Done",
 
+    "propsedit_Target temperature for cooldown. Notification will be send when temp is reached and Actor can be triggered" : "Target temperature for cooldown. Notification will be send when temp is reached and Actor can be triggered",
+    "propsedit_Sensor that is used during cooldown" : "Sensor that is used during cooldown",
+    "propsedit_Actor can trigger a valve for the cooldwon to target temperature" : "Actor can trigger a valve for the cooldwon to target temperature",
+    "propsedit_Temp" : "Temp",
+    "propsedit_Boil temperature" : "Boil temperature",
+    "propsedit_Timer" : "Timer",
+    "propsedit_Time in Minutes" : "Time in Minutes",
+    "propsedit_LidAlert" : "LidAlert",
+    "propsedit_Trigger Alert to remove lid if temp is close to boil" : "Trigger Alert to remove lid if temp is close to boil",
+    "propsedit_AutoMode" : "AutoMode",
+    "propsedit_Switch Kettlelogic automatically on and off -> Yes" :  "Switch Kettlelogic automatically on and off -> Yes",
+    "propsedit_First_Wort" : "First_Wort",
+    "propsedit_First Wort Hop alert if set to Yes" : "First Wort Hop alert if set to Yes",
+    "propsedit_Hop_1" : "Hop_1",
+    "propsedit_First Hop alert (minutes before finish)" : "First Hop alert (minutes before finish)",
+    "propsedit_Hop_2" : "Hop_2",
+    "propsedit_Second Hop alert (minutes before finish)" : "Second Hop alert (minutes before finish)",
+    "propsedit_Hop_3" : "Hop_3",
+    "propsedit_Third Hop alert (minutes before finish)" : "Third Hop alert (minutes before finish)",
+    "propsedit_Hop_4" : "Hop_4",
+    "propsedit_Fourth Hop alert (minutes before finish)" : "Fourth Hop alert (minutes before finish)",
+    "propsedit_Hop_5" : "Hop_5",
+    "propsedit_Fifth Hop alert (minutes before finish)" : "Fifth Hop alert (minutes before finish)",
+    "propsedit_Hop_6" : "Hop_6",
+    "propsedit_Sixth Hop alert (minutes before finish)" : "Sixth Hop alert (minutes before finish)",
+    "propsedit_" : "",
+    "propsedit_Notification" : "Notification",
+    "propsedit_Text for notification when Temp is reached" : "Text for notification when Temp is reached",
+    "propsedit_toggle_type" : "toggle_type",
+    "propsedit_Choose if Actor should be switched on or off in this step" : "Choose if Actor should be switched on or off in this step",
+    "propsedit_Actor that should be toggled during this step" : "Actor that should be toggled during this step",
+    "propsedit_AutoNext" : "AutoNext",
+    "propsedit_Automatically move to next step (Yes) or pause after Notification (No)" : "Automatically move to next step (Yes) or pause after Notification (No)",
+    "propsedit_Text for notification" : "Text for notification",
+    "propsedit_Yes" : "Yes",
+    "propsedit_No" : "No",
+    "propsedit_On" : "On",
+    "propsedit_Off" : "Off",
+
+    "StepTypeSelect_Logic" : "Logic",
     "StepTypeSelect_MashStep" : "MashStep",
-    "StepTypeSelect_Logic" : "Logic"
+    "StepTypeSelect_BoilStep" : "BoilStep",
+    "StepTypeSelect_WaitStep" : "WaitStep",
+    "StepTypeSelect_MashInStep" : "MashInStep",
+    "StepTypeSelect_CooldownStep" : "CooldownStep",
+    "StepTypeSelect_ToggleStep" : "ToggleStep",
+    "StepTypeSelect_ActorStep" : "ActorStep",
+    "StepTypeSelect_NotificationStep" : "NotificationStep"
 
     
+
+
+
+
     }
