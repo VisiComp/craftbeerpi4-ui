@@ -320,12 +320,26 @@
     "propsedit_Choose if Actor should be switched on or off in this step" : "Choose if Actor should be switched on or off in this step",
     "propsedit_Actor that should be toggled during this step" : "Actor that should be toggled during this step",
     "propsedit_AutoNext" : "AutoNext",
-    "propsedit_Automatically move to next step (Yes) or pause after Notification (No)" : "Automatically move to next step (Yes) or pause after Notification (No)",
+    "propsedit_Automatically move to next step (Yes) or pause after Notification (No)" : "Automatically move to next step (Yes) or pause after Notification (Noooo)",
     "propsedit_Text for notification" : "Text for notification",
     "propsedit_Yes" : "Yes",
     "propsedit_No" : "No",
     "propsedit_On" : "On",
     "propsedit_Off" : "Off",
+    "propsedit_Pressure" : "Pressure",
+    "propsedit_Step Pressure" :  "Step Pressure",
+    "propsedit_RampRate" : "RampRate",
+    "propsedit_Temperature Sensor" : "Temperature Sensor",
+    "propsedit_Ramp to this temp" : "Ramp to this temp",
+    "propsedit_Ramp x °C/F per day. Default: 1" : "propsedit_Ramp x °C/F per day. Default: 1",
+    "propsedit_TimerD" : "TimerD",
+    "propsedit_Timer Days" : "Timer Days",
+    "propsedit_TimerH" : "TimerH",
+    "propsedit_Timer Hours" : "Timer Hours",
+    "propsedit_TimerM" : "TimerM",
+    "propsedit_Timer Minutes" : "Timer Minutes",
+    "ropsedit_Step Temperature" : "Step Temperature",
+
 
     "StepTypeSelect_Logic" : "Logic",
     "StepTypeSelect_MashStep" : "MashStep",
@@ -335,7 +349,13 @@
     "StepTypeSelect_CooldownStep" : "CooldownStep",
     "StepTypeSelect_ToggleStep" : "ToggleStep",
     "StepTypeSelect_ActorStep" : "ActorStep",
-    "StepTypeSelect_NotificationStep" : "NotificationStep"
+    "StepTypeSelect_NotificationStep" : "NotificationStep",
+
+    "FermenterStepTypeSelect_Logic": "Logic",
+    "FermenterStepTypeSelect_FermenterNotificationStep" : "FermenterNotificationStep",
+    "FermenterStepTypeSelect_FermenterTargetTempStep" : "FermenterTargetTempStep",
+    "FermenterStepTypeSelect_FermenterRampTempStep" : "FermenterRampTempStep",
+    "FermenterStepTypeSelect_FermenterStep" : "FermenterStep"
 
     
 

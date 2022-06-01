@@ -326,6 +326,20 @@
     "propsedit_No" : "Não",
     "propsedit_On" : "Ligado",
     "propsedit_Off" : "Desligado",
+    "propsedit_Pressure" : "Pressão",
+    "propsedit_Step Pressure" :  "Etapa de Pressao",
+    "propsedit_RampRate" : "RampRate",
+    "propsedit_Temperature Sensor" : "Sensor de Temperatura",
+    "propsedit_Ramp to this temp" : "Ramp to this temp",
+    "propsedit_Ramp x °C/F per day. Default: 1" : "propsedit_Ramp x °C/F per day. Default: 1",
+    "propsedit_TimerD" : "CronometroD",
+    "propsedit_Timer Days" : "Cronometro Dias",
+    "propsedit_TimerH" : "CronometroH",
+    "propsedit_Timer Hours" : "Cronometro Horas",
+    "propsedit_TimerM" : "CronometroM",
+    "propsedit_Timer Minutes" : "Timer Minutes",
+
+    "ropsedit_Step Temperature" : "Etapa Temperature",
     
     "StepTypeSelect_Logic" : "Logica",
     "StepTypeSelect_MashStep" : "Etapa De Mostura",
@@ -335,7 +349,14 @@
     "StepTypeSelect_CooldownStep" : "Etapa de resfriamento",
     "StepTypeSelect_ToggleStep" : "ToggleStep",
     "StepTypeSelect_ActorStep" : "Etapa do Atuador",
-    "StepTypeSelect_NotificationStep" : "Etapa De Notificação"
+    "StepTypeSelect_NotificationStep" : "Etapa De Notificação",
+
+    "FermenterStepTypeSelect_Logic": "Logica",
+    "FermenterStepTypeSelect_FermenterNotificationStep" : "Etapa de Notificação da Fermentadora",
+    "FermenterStepTypeSelect_FermenterTargetTempStep" : "Etapa de Temperatura Alvo",
+    "FermenterStepTypeSelect_FermenterRampTempStep" : "FermenterRampTempStep",
+    "FermenterStepTypeSelect_FermenterStep" : "EtapaDeFermentação"
+
     
 
     }

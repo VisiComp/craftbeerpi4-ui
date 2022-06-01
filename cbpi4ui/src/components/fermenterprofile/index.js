@@ -185,7 +185,7 @@ const FermenterProfile = () => {
                       </TableCell>
                       <TableCell align="left">{row.name}</TableCell>
                       <TableCell align="right" className="hidden-xs">
-                        {row.type}
+                        {t("FermenterStepTypeSelect_"+row.type)}
                       </TableCell>
                       <TableCell align="right" className="hidden-xs">
                         {row.state_text}
