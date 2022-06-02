@@ -69,7 +69,7 @@ const SensorTable = () => {
                   {row.name}
                 </TableCell>
                 <TableCell align="right" className="hidden-xs">
-                  {row.type}
+                  {t("hardware_SensorTypeSelect_"+row.type)}
                 </TableCell>
                 <TableCell align="right" className="hidden-xs">
                   {OneWireID(row)}

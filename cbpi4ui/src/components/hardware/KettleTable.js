@@ -57,7 +57,7 @@ const KettleTable = () => {
                                         {row.name}
                                     
                                 </TableCell>
-                                <TableCell align="right" className="hidden-xs">{row.type}</TableCell>
+                                <TableCell align="right" className="hidden-xs">{t("hardware_kettle_LogicSelect_"+row.type)}</TableCell>
                                 <TableCell align="right" className="hidden-xs"><ActorValue id={row.heater}/></TableCell>
                                 <TableCell align="right" className="hidden-xs" ><ActorValue id={row.agitator}/></TableCell>
                                 <TableCell align="right" className="hidden-xs"><SensorValue id={row.sensor}/></TableCell>

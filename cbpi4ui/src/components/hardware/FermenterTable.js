@@ -56,7 +56,7 @@ const FermenterTable = () => {
                                         {row.name}
                                     
                                 </TableCell>
-                                <TableCell align="right" className="hidden-xs">{row.type}</TableCell>
+                                <TableCell align="right" className="hidden-xs">{t("hardware_Fermenter_Logic_Select_"+row.type)}</TableCell>
                                 <TableCell align="right" className="hidden-xs"><ActorValue id={row.heater}/></TableCell>
                                 <TableCell align="right" className="hidden-xs" ><ActorValue id={row.cooler}/></TableCell>
                                 <TableCell align="right" className="hidden-xs"><SensorValue id={row.sensor}/></TableCell>

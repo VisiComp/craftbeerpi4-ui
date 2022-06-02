@@ -60,7 +60,7 @@ const ActorTable = () => {
                                         {row.name}
                                 
                                 </TableCell>
-                                <TableCell align="right" className="hidden-xs">{row.type}</TableCell>
+                                <TableCell align="right" className="hidden-xs">{t("hardware_ActorTypeSelect_"+row.type)}</TableCell>
                                 <TableCell align="right" className="hidden-xs">{row.props["GPIO"]}</TableCell>
                                 <TableCell align="right" className="hidden-xs"><ActorSwitch id={row.id}/></TableCell>
                                 <TableCell align="right" className="hidden-xs">
