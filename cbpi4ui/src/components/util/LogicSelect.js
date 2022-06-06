@@ -12,7 +12,7 @@ import {useTranslation} from 'react-i18next';
     const { state } = useCBPi()
     return <>
         <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-            {t("hardware_kettle_LogicSelect_"+label)} {value}
+            {t("hardware_kettle_LogicSelect_"+label)} {t("hardware_kettle_LogicSelect_"+value)}
      </InputLabel>
         <Select fullWidth
             labelId="demo-simple-select-label"

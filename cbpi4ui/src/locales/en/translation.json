@@ -331,7 +331,7 @@
     "propsedit_RampRate" : "RampRate",
     "propsedit_Temperature Sensor" : "Temperature Sensor",
     "propsedit_Ramp to this temp" : "Ramp to this temp",
-    "propsedit_Ramp x °C/F per day. Default: 1" : "propsedit_Ramp x °C/F per day. Default: 1",
+    "propsedit_Ramp x °C/F per day. Default: 1" : "Ramp x °C/F per day. Default: 1",
     "propsedit_TimerD" : "TimerD",
     "propsedit_Timer Days" : "Timer Days",
     "propsedit_TimerH" : "TimerH",
@@ -382,6 +382,8 @@
     "propsedit_25" : "25",
     "propsedit_26" : "26",
     "propsedit_27" : "27",
+    "propsedit_30" : "30",
+    "propsedit_60" : "60",
     "propsedit_Pause" : "Pause",
     "propsedit_AutoStart" : "AutoStart",
     "propsedit_Start Pressure" : "Start Pressure",
@@ -393,6 +395,21 @@
     "propsedit_GPIO" : "GPIO",
     "propsedit_Inverted" : "Inverted",
     "propsedit_SamplingTime" : "SamplingTime",
+    "propsedit_Key" : "Key",
+    "propsedit_Http Key" : "Http Key",
+    "propsedit_Sensor" : "Sensor",
+    "propsedit_offset" : "offset",
+    "propsedit_Sensor Offset (Default is 0)" : "Sensor Offset (Default is 0)",
+    "propsedit_Interval" : "Interval",
+    "propsedit_Frequency" : "Frequency",
+    "propsedit_Switch Fermenterlogic automatically on and off -> Yes" : "Switch Fermenterlogic automatically on and off -> Yes",
+    "propsedit_Valve Release time in seconds" : "Valve Release time in seconds",
+    "propsedit_Pause time in seconds between valve release" : "Pause time in seconds between valve release",
+    "propsedit_Autostart Fermenter on cbpi start" : "Autostart Fermenter on cbpi start",
+    "propsedit_Interval in Seconds" : "Interval in Seconds",
+    "propsedit_Fermenter" : "Fermenter",
+    "propsedit_No: Active on high; Yes: Active on low" : "No: Active on high; Yes: Active on low",
+    "propsedit_Time in seconds for power base interval (Default:5)" : "Time in seconds for power base interval (Default:5)",
 
     "StepTypeSelect_Logic" : "Logic",
     "StepTypeSelect_MashStep" : "MashStep",
@@ -412,6 +429,9 @@
 
     "hardware_kettle_LogicSelect_Logic" : "Logic",
     "hardware_kettle_LogicSelect_Hysteresis" : "Hysteresis",
+    "hardware_kettle_LogicSelect_" : "",
+    "hardware_Fermenter_Logic_Select_" : "",
+    "hardware_Fermenter_Logic_Select_FermenterLogic" : "FermenterLogic",
     "hardware_Fermenter_Logic_Select_Fermenter Spunding Hysteresis" : "Fermenter Spunding Hysteresis",
     "hardware_Fermenter_Logic_Select_Fermenter Hysteresis" : "Fermenter Hysteresis",
     "hardware_ActorTypeSelect_GPIOActor" : "GPIOActor",
@@ -422,7 +442,14 @@
     "hardware_SensorTypeSelect_HTTPSensor" : "HTTPSensor",
     "hardware_SensorTypeSelect_OneWire" : "OneWire",
 
-    "hardware_actor not found" : "Actor not Found"
+    "hardware_actor not found" : "Actor not Found",
+
+    "KettleSelect_Kettle" : "Kettle",
+    "ActorSelect_Actor" : "Actor",
+    "ActorSelect_Actor that should be toggled during this step" : "Actor that should be toggled during this step",
+    "FermenterSelect_Fermenter" : "Fermenter",
+    "SensorSelect_Sensor" : "Sensor"
+
 
 
 

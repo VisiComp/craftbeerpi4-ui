@@ -21,7 +21,7 @@ const SelectInput = ({ label, description="", options=[], value, onChange }) => 
             </MenuItem>
           ))}
         </Select>
-        <FormHelperText>{description}</FormHelperText>
+        <FormHelperText>{t("propsedit_"+description)}</FormHelperText>
       </>
     );
   };
@@ -42,9 +42,9 @@ const PropsEdit = ({ config, onChange = () => {}, data={}}) => {
         //console.log(1,item.description)
         return <SelectInput description={t("propsedit_")+item.description} label={t("propsedit_"+item.label)} options={item.options} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "kettle":
-        return <KettleSelect description={item.description} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
+        return <KettleSelect description={t("propsedit_"+item.description)} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "fermenter":
-        return <FermenterSelect description={item.description} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
+        return <FermenterSelect description={t("propsedit_"+item.description)} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "sensor":
         return <SensorSelect description={t("propsedit_"+item.description)} value={data[item.label]} onChange={(e) => onChange(item.label, e.target.value)} />;
       case "actor":

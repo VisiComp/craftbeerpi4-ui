@@ -3,8 +3,11 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import { useContext } from "react";
 import { CBPiContext } from "../data";
+import {useTranslation} from 'react-i18next';
+
 
 const ActorSelect = ({ label = "Actor", description = "", value, onChange }) => {
+  const { t, i18n } = useTranslation();
   const { state } = useContext(CBPiContext);
 
   return (
