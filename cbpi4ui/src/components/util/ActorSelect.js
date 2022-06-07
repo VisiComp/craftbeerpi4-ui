@@ -13,7 +13,7 @@ const ActorSelect = ({ label = "Actor", description = "", value, onChange }) => 
   return (
     <>
       <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-        {label}
+        {t(label)}
       </InputLabel>
       <Select fullWidth labelId="demo-simple-select-label" id="demo-simple-select" value={value} onChange={onChange}>
       <MenuItem key="actor-non" value="">---</MenuItem>
@@ -23,7 +23,7 @@ const ActorSelect = ({ label = "Actor", description = "", value, onChange }) => 
           </MenuItem>
         ))}
       </Select>
-      <FormHelperText>{description}</FormHelperText>
+      <FormHelperText>{t(description)}</FormHelperText>
     </>
   );
 };

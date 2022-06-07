@@ -204,7 +204,7 @@ export const DashboardProvider = ({ children }) => {
 
     setPathes([...temp_pathes]);
   };
-
+  const { t, i18n } = useTranslation();
   const add = (item) => {
     const id = uuidv4();
     var props = item.props.reduce((obj, item) => Object.assign(obj, { [item.name]: item.default }), {});
@@ -212,7 +212,7 @@ export const DashboardProvider = ({ children }) => {
       id,
       type: item.type,
       props: props,
-      name: item.name,
+      name: t("dashboard_properties_"+item.name),
       x: 10,
       y: 10,
       instance: <DashboardContainer key={id} id={id} type={item.component} />,

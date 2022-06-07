@@ -1,17 +1,20 @@
 
 import React from "react";
+import {useTranslation} from 'react-i18next';
 import { useFermenter } from "../../data";
 import { useModel } from "../DashboardContext";
 
+
 const FermenterTargetTemp = ({ id }) => {
-    
+
+    const { t, i18n } = useTranslation();
     const model = useModel(id)
     const fermenter = useFermenter(model.props?.fermenter)
     const css_style = { color: model?.props?.color || "#fff", fontSize: `${model?.props?.size}px` };
 
 
     if(!fermenter) {
-      return "Missing Config"
+      return t("dashboard_missing_config")
     }
 
 
@@ -19,14 +22,15 @@ const FermenterTargetTemp = ({ id }) => {
   };
 
   const FermenterTargetPressure = ({ id }) => {
-    
+  
+    const { t, i18n } = useTranslation();
     const model = useModel(id)
     const fermenter = useFermenter(model.props?.fermenter)
     const css_style = { color: model?.props?.color || "#fff", fontSize: `${model?.props?.size}px` };
 
 
     if(!fermenter) {
-      return "Missing Config"
+      return t("dashboard_missing_config")
     }
 
 

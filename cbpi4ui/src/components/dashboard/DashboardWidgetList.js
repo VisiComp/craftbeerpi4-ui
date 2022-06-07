@@ -3,6 +3,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import AppsIcon from "@material-ui/icons/Apps";
 import React, { useContext } from "react";
+import {useTranslation} from 'react-i18next';
 import "../../App.css";
 import { CBPiGrainIcon, CBPiHopsIcon, CBPiLiquidIcon, CBPiPipeIcon, CBPiYeastIcon } from "../util/icons/CBPiSensorIcon";
 import { DashboardContext } from "./DashboardContext";
@@ -30,8 +31,9 @@ const DashboardSidebarListItem = ({ item }) => {
   const selected = state.selected === item.id;
 
   const classes = useStyles();
+  const { t, i18n } = useTranslation();
   return (
-    <Tooltip title={item.name} placement="right">
+    <Tooltip title={t("dashboard_properties_"+item.name)} placement="right">
     <ListItem
       key={item.id}
       button

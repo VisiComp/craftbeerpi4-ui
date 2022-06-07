@@ -13,7 +13,7 @@ const SensorSelect = ({ label = "Sensor", description="", value, onChange }) => 
   return (
     <>
       <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-        {label}
+        {t(label)}
       </InputLabel>
       <Select fullWidth labelId="demo-simple-select-label" id="demo-simple-select" value={value} onChange={onChange}>
         <MenuItem key="sensor-non" value={""}>

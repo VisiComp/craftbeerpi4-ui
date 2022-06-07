@@ -15,6 +15,7 @@ import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import { default as React, useContext, useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
 import { useCBPi, useFermenter } from "../../data";
 import { fermenterapi } from "../../data/fermenterapi";
 import ActorName from "../../util/ActorName";
@@ -255,6 +256,7 @@ const StepItem = ({ size, item }) => {
 
 export const FermenterSteps = ({ id }) => {
   const { state: state2, actions } = useContext(DashboardContext);
+  const { t, i18n } = useTranslation();
 
   const model = useModel(id);
   const { state } = useCBPi();
@@ -285,7 +287,7 @@ export const FermenterSteps = ({ id }) => {
 
   if( draggable) {
     return <div className="box" style={{...inputStyle, display:"flex", justifyContent: "center", alignItems: "center"}}>
-      <Typography variant="h6">Fermenter Steps</Typography>
+      <Typography variant="h6">{t("dashboard_properties_fermenter_steps")}</Typography>
     </div>
   }
 

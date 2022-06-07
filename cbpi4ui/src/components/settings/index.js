@@ -35,12 +35,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SelectBox = ({ options, value, onChange }) => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <Select labelId="demo-simple-select-label" id="demo-simple-select" value={value} onChange={onChange}>
         {options.map((item) => (
           <MenuItem key={item.value} value={item.value}>
-            {item.label}
+            {t("settings_key_"+item.label)}
           </MenuItem>
         ))}
       </Select>
