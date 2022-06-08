@@ -56,9 +56,9 @@ const MashStepLine = ({ item, items, setItems, onSelectType, handleInput, handle
         <Grid container direction="row" justify="space-between" alignItems="center">
           <Grid item>
             {!item.type ? <ReportProblemIcon color="secondary" fontSize="small"/>  : ""}
-            <Typography display="inline">{item.name || "NO NAME"}</Typography> -{" "}
+            <Typography display="inline">{item.name || t("no name")}</Typography> -{" "}
             <Typography variant="subtitle2" display="inline" color="textSecondary">
-              {item.type || "NO TYPE"}
+              {item.type || t("no type")}
             </Typography>
           </Grid>
           <Grid item>

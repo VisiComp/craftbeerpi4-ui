@@ -7,6 +7,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { actorapi } from "../../data/actorapi";
 import PropsEdit from "../../util/PropsEdit";
 import Confetti from "react-dom-confetti";
+import {useTranslation} from 'react-i18next';
 
 const ButtonActionPropsDialog = ({ action = {}, config, open, onClose, onSubmit }) => {
   const [props, setProps] = useState({});
@@ -109,6 +110,7 @@ export const DashboardButton = ({ id, width, height }) => {
     colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
   };
 
+  const { t, i18n } = useTranslation();
   return useMemo(() => {
     let cssStyle = { width: model.width + "px", height: model.height + "px" };
     let btnColor = actor?.state ? "primary" : "primary";
@@ -125,7 +127,7 @@ export const DashboardButton = ({ id, width, height }) => {
       if (model.props?.actor && actor) {
         return model.name;
       } else {
-        return "Missing Config";
+        return t("dashboard_missing_config");
       }
     };
 

@@ -8,6 +8,8 @@ import { useMemo, useState } from "react";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { sensorapi } from "../../data/sensorapi";
 import PropsEdit from "../../util/PropsEdit";
+import {useTranslation} from 'react-i18next';
+
 
 const ButtonActionPropsDialog = ({ action = {}, config, open, onClose, onSubmit }) => {
   const [props, setProps] = useState({});
@@ -101,10 +103,12 @@ export const SensorData = ({ id }) => {
 
     const handleClose = () => setOpen(false);
     const handleOpen = () => setOpen(true);
+    const { t, i18n } = useTranslation();
+
 
     const css_style = { color: model?.props?.color || "#fff", fontSize: `${model?.props?.size}px` };
     if (!action || action === "no") {
-    return sensor_id ? (<div style={css_style}><SensorValue id={sensor_id} digits={sensor_digits} />{model.props?.unit}</div>) : "MISSING CONFIG";
+    return sensor_id ? (<div style={css_style}><SensorValue id={sensor_id} digits={sensor_digits} />{model.props?.unit}</div>) : t("dashboard_missing_config2");
     }
     else {
       return sensor_id ? (<div style={css_style}><SensorValue id={sensor_id} digits={sensor_digits} />{model.props?.unit}
@@ -112,6 +116,6 @@ export const SensorData = ({ id }) => {
                           <MoreVertIcon />
                           </Button>
                           <SensorActionDialog open={open} onClose={handleClose} model={model} sensor={sensor} />
-                         </div>) : "MISSING CONFIG";
+                         </div>) : t("dashboard_missing_config2");
     };
   };

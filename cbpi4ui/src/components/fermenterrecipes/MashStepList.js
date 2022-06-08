@@ -8,6 +8,9 @@ import { useCBPi } from "../data";
 import PropsEdit from "../util/PropsEdit";
 import StepTypeSelect from "../util/StepTypeSelect";
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';
+import {useTranslation} from 'react-i18next';
+
+
 
 const MashStepLine = ({ item, items, setItems, onSelectType, handleInput, handleInputProps, index, remove }) => {
   const { state } = useCBPi();
@@ -47,15 +50,17 @@ const MashStepLine = ({ item, items, setItems, onSelectType, handleInput, handle
     move(items, index, 1);
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <Accordion>
       <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
         <Grid container direction="row" justify="space-between" alignItems="center">
           <Grid item>
             {!item.type ? <ReportProblemIcon color="secondary" fontSize="small"/>  : ""}
-            <Typography display="inline">{item.name || "NO NAME"}</Typography> -{" "}
+            <Typography display="inline">{item.name || t("no name")}</Typography> -{" "}
             <Typography variant="subtitle2" display="inline" color="textSecondary">
-              {item.type || "NO TYPE"}
+              {item.type || t("no type")}
             </Typography>
           </Grid>
           <Grid item>

@@ -270,6 +270,7 @@
     "dashboard_sample_expression" : "sample expression (\"\" are mandatory for identifying actors): (\"actor1\" && \"actor2\") || (\"actor2\" && \"actor3\") \n don't forget the quote",
     "dashboard_config_missing" : "Config Missing",
     "dashboard_missing_config" : "Missing Config",
+    "dashboard_missing_config2" : "MISSING CONFIG",
     "svg_missing_config" : "MISSING CONFIG",
     "chart" : "Chart",
     "close" : "Close",

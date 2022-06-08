@@ -82,7 +82,7 @@ const Chart = ({ id }) => {
     return (
       <div className="box" style={css_style2}>
         <div>{t("chart")} {model.name}</div>
-        <div>{!model?.props?.sensor ? t("Missing Config") : ""}</div>
+        <div>{!model?.props?.sensor ? t("dashboard_missing_config") : ""}</div>
       </div>
     );
   }

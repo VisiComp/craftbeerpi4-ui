@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useCBPi } from "../../data";
 import { useDraggable, useModel } from "../DashboardContext";
+import {useTranslation} from 'react-i18next';
+
 
 const hexToRgb = (hex) => {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -43,8 +45,9 @@ export const Liquid = ({ id }) => {
 
   }, [model.props.maxvalue, model.props.height, model.props.width, model.props.percent, model.props.color, model.props.sensor]);
 
+  const { t, i18n } = useTranslation();
   if (!sensorid) {
-    return <div>Missing Config</div>;
+    return <div>{t("dashboard_missing_config")}</div>;
   }
   const data = parseInt(state?.sensorData[sensorid] || 0);
 

@@ -15,6 +15,8 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { pink } from '@mui/material/colors';
+import {useTranslation} from 'react-i18next';
+
 
 const theme = createTheme({
   palette: {
@@ -160,6 +162,8 @@ const GrafanaChart = ({ id }) => {
     setOpen(false);
   }
 
+  const { t, i18n } = useTranslation();
+
   if (draggable === true) {
     let css_style2 = {
       display: "flex",
@@ -172,8 +176,8 @@ const GrafanaChart = ({ id }) => {
     };
     return (
       <div className="box" style={css_style2}>
-        <div>Chart {model.name}</div>
-        <div>{!model?.props?.url ? "Missing Config" : ""}</div>
+        <div>{t("chart")} {model.name}</div>
+        <div>{!model?.props?.url ? t("dashboard_missing_config") : ""}</div>
       </div>
     );
   }

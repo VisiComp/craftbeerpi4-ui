@@ -265,7 +265,6 @@ export const FermenterSteps = ({ id }) => {
   const draggable = useDraggable()
   const [fermenterid, setFermenterID] = useState(model.props?.fermenter);
   const [brewname, setBrewName] = useState("");
-
  
   useEffect(() => {
     
@@ -302,7 +301,7 @@ export const FermenterSteps = ({ id }) => {
           }}
           startIcon={<MenuBookIcon />}
         >
-          Please select a Recipe
+          {t("please select a recipe")}
         </Button>
       </div>
     );
