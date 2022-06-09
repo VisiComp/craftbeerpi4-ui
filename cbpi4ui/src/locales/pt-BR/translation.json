@@ -326,6 +326,9 @@
     "dashboard_properties_blue" : "azul",
     "dashboard_properties_fermenter_steps" : "Etapas da Fermentadora",
     "dashboard_properties_digits" : "digitos",
+    "target_temp_dialog" : "Definir Temperatura Alvo",
+    "target_pressure_dialog" : "Definir Pressao Alvo",
+    "button_set" : "Definir",
     
     "state_active" : "Ativo",
     "state_inactive" : "Inativo",

@@ -326,6 +326,9 @@
     "dashboard_properties_blue" : "blue",
     "dashboard_properties_fermenter_steps" : "Fermenter Steps",
     "dashboard_properties_digits" : "digits",
+    "target_temp_dialog" : "Set Target Temp",
+    "target_pressure_dialog" : "Set Target Pressure",
+    "button_set" : "Set",
     
 
 

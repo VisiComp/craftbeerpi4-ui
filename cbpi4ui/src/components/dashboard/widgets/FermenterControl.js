@@ -14,6 +14,7 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
 import React, { useContext, useEffect, useState, useMemo } from "react";
+import {useTranslation} from 'react-i18next';
 import { useCBPi, useFermenter } from "../../data";
 import { useActor } from "../../data/index";
 import { DashboardContext, useModel } from "../DashboardContext";
@@ -66,6 +67,7 @@ const theme = createTheme({
 
 
 const TargetTempDialog = ({ onClose, fermenter, open }) => {
+  const { t, i18n } = useTranslation();
   let TEMP_UNIT = "TEMP_UNIT";
   const [value, setValue] = useState(30);
   const [checkunit, setCheckUnit] = useState(false);
@@ -144,9 +146,11 @@ const TargetTempDialog = ({ onClose, fermenter, open }) => {
     setValue(newValue);
   };
 
+  
+
   return (
     <Dialog fullWidth onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title">Set Target Temp {fermenter.name} </DialogTitle>
+      <DialogTitle id="simple-dialog-title">{t("target_temp_dialog")} {fermenter.name} </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -157,11 +161,11 @@ const TargetTempDialog = ({ onClose, fermenter, open }) => {
           <Slider min={minval} max={maxval} marks={marks} step={1} value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Button variant="contained" onClick={handleClose} color="secondary" autoFocus>
-              Cancel
+              {t("cancel")}
             </Button>
             <Button variant="contained" onClick={handleSet} color="primary" autoFocus
               >
-              Set
+              {t("button_set")}
             </Button>
           </div>
         </DialogContentText>
@@ -172,6 +176,7 @@ const TargetTempDialog = ({ onClose, fermenter, open }) => {
 };
 
 const TargetPressureDialog = ({ onClose, fermenter, open }) => {
+  const { t, i18n } = useTranslation();
   let PRESSURE_UNIT = "PRESSURE_UNIT";
   const [unit, setUnit] = useState("kPa");
   const [value, setValue] = useState(50);
@@ -259,9 +264,11 @@ const TargetPressureDialog = ({ onClose, fermenter, open }) => {
     setValue(newValue);
   };
 
+  
+
   return (
     <Dialog fullWidth onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title">Set Target Pressure {fermenter.name} </DialogTitle>
+      <DialogTitle id="simple-dialog-title">{t("target_pressure_dialog")} {fermenter.name} </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -272,11 +279,11 @@ const TargetPressureDialog = ({ onClose, fermenter, open }) => {
           <Slider min={minval} max={maxval} marks={marks} step={stepwidth} value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Button variant="contained" onClick={handleClose} color="secondary" autoFocus>
-              Cancel
+              {t("cancel")}
             </Button>
             <Button variant="contained" onClick={handleSet} color="primary" autoFocus
               >
-              Set
+              {t("button_set")}
             </Button>
           </div>
         </DialogContentText>

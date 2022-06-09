@@ -12,6 +12,7 @@ import DriveEtaIcon from "@material-ui/icons/DriveEta";
 import TrackChangesIcon from "@material-ui/icons/TrackChanges";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import React, { useContext, useEffect, useState, useMemo } from "react";
+import {useTranslation} from 'react-i18next';
 import { useCBPi, useKettle } from "../../data";
 import { useActor } from "../../data/index";
 import { DashboardContext, useModel } from "../DashboardContext";
@@ -64,6 +65,7 @@ const theme = createTheme({
 
 
 const TargetTempDialog = ({ onClose, kettle, open }) => {
+  const { t, i18n } = useTranslation();
   let TEMP_UNIT = "TEMP_UNIT";
   const [value, setValue] = useState(30);
   const [checkunit, setCheckUnit] = useState(false);
@@ -146,9 +148,11 @@ const TargetTempDialog = ({ onClose, kettle, open }) => {
     setValue(newValue);
   };
 
+  
+
   return (
     <Dialog fullWidth onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title">Set Target Temp {kettle.name} </DialogTitle>
+      <DialogTitle id="simple-dialog-title">{t("target_temp_dialog")} {kettle.name} </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -159,11 +163,11 @@ const TargetTempDialog = ({ onClose, kettle, open }) => {
           <Slider min={minval} max={maxval} marks={marks} step={1} value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Button variant="contained" onClick={handleClose} color="secondary" autoFocus>
-              Cancel
+              {t("cancel")}
             </Button>
             <Button variant="contained" onClick={handleSet} color="primary" autoFocus
               >
-              Set
+              {t("button_set")}
             </Button>
           </div>
         </DialogContentText>
