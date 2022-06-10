@@ -41,19 +41,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const StepProps = ({ config, data }) => {
+  const { t, i18n } = useTranslation();
   if (!config) {
     return <></>;
   }
 
   
-
+  
   return config.map((e, index) => {
     switch (e.type) {
       case "actor":
         return (
           <Grid item xs={12} md={6} key={index}>
             <Typography variant="caption" display="block" gutterBottom>
-              {e.label}{" "}
+             {t(e.label)}{" "}
             </Typography>
             <ActorName id={data[e.label]} />
           </Grid>
@@ -62,7 +63,7 @@ const StepProps = ({ config, data }) => {
         return (
           <Grid item xs={12} md={6} key={index}>
             <Typography variant="caption" display="block" gutterBottom>
-              {e.label}
+              {t(e.label)}
             </Typography>
             <SensorName id={data[e.label]} />
           </Grid>
@@ -71,7 +72,7 @@ const StepProps = ({ config, data }) => {
         return (
           <Grid item xs={12} md={6} key={index}>
             <Typography variant="caption" display="block" gutterBottom>
-              {e.label}{" "}
+              {t(e.label)}{" "}
             </Typography>
             <KettleName id={data[e.label]} />
           </Grid>
@@ -81,9 +82,9 @@ const StepProps = ({ config, data }) => {
         return (
           <Grid item xs={12} md={6} key={index}>
             <Typography variant="caption" display="block" gutterBottom>
-              {e.label}{" "}
+              {t("widget_steps_"+e.label)}{" "}
             </Typography>
-            {data[e.label]}
+            {t(data[e.label])}
           </Grid>
         );
     }
@@ -122,6 +123,7 @@ const StepActionDialog = ({ action, config, open, onClose, onSubmit }) => {
 };
 
 const StepActionButton = ({ item, action }) => {
+  const { t, i18n } = useTranslation();
   const [open, setOpen] = React.useState(false);
 
   const call_action = (id, action) => {
@@ -142,12 +144,14 @@ const StepActionButton = ({ item, action }) => {
   return (
     <>
       <Button startIcon={<PlayCircleFilledIcon />} variant="contained" color="primary" fullWidth onClick={() => call_action(item.id, action)}>
-        {action.label}{" "}
+        {t("widget_steps_"+action.label)}{" "}
       </Button>
       {action?.parameters ? <StepActionDialog action={action} open={open} onSubmit={handleSubmit} onClose={handleClose} /> : null}
     </>
   );
 };
+
+
 
 const StepActionList = ({ type, item }) => {
   return (

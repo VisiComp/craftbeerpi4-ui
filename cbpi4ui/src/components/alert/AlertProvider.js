@@ -9,6 +9,8 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import React from "react";
+import {useTranslation} from 'react-i18next';
+
 
 import { notificationapi } from "../data/notificationapi";
 
@@ -22,17 +24,19 @@ export const ActionDialog = ({ item }) => {
     });
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <Dialog open={true} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
-      <DialogTitle id="alert-dialog-title">{item.title}</DialogTitle>
+      <DialogTitle id="alert-dialog-title">{t(item.title)}</DialogTitle>
       <DialogContent>
-        <DialogContentText id="alert-dialog-description">{item.message}</DialogContentText>
+        <DialogContentText id="alert-dialog-description">{t(item.message)}</DialogContentText>
       </DialogContent>
       <DialogActions>
         {item.action.map((a) => {
           return (
             <Button onClick={() => call_action(item.id, a.id)} color="primary">
-              {a.label}
+              {t(a.label)}
             </Button>
           );
         })}
@@ -55,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
 export const AlertContext = createContext({});
 
 export const AlertProvider = ({ children }) => {
+  const { t, i18n } = useTranslation();
   const classes = useStyles();
   const [alerts, setAlerts] = useState([]);
 
@@ -98,7 +103,7 @@ export const AlertProvider = ({ children }) => {
           if (a?.action?.length > 0) {
             return <ActionDialog key={a.id} item={a} />;
           } else {
-            return <Alert severity={a.type || "info"} key={a.id}>{a.title} - {a.message}</Alert>;
+            return <Alert severity={a.type || "info"} key={a.id}>{t(a.title)} - {t(a.message)}</Alert>;
           }
         })}
       </div>
