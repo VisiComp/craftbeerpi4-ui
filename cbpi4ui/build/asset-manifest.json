@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "./static/css/main.bf234999.chunk.css",
-    "main.js": "./static/js/main.c462efcc.chunk.js",
-    "main.js.map": "./static/js/main.c462efcc.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.a99843c7.js",
-    "runtime-main.js.map": "./static/js/runtime-main.a99843c7.js.map",
-    "static/js/2.04f7f055.chunk.js": "./static/js/2.04f7f055.chunk.js",
-    "static/js/2.04f7f055.chunk.js.map": "./static/js/2.04f7f055.chunk.js.map",
-    "static/js/3.83f2192c.chunk.js": "./static/js/3.83f2192c.chunk.js",
-    "static/js/3.83f2192c.chunk.js.map": "./static/js/3.83f2192c.chunk.js.map",
+    "main.js": "./static/js/main.1886810c.chunk.js",
+    "main.js.map": "./static/js/main.1886810c.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.6e748a7c.js",
+    "runtime-main.js.map": "./static/js/runtime-main.6e748a7c.js.map",
+    "static/js/2.3105a913.chunk.js": "./static/js/2.3105a913.chunk.js",
+    "static/js/2.3105a913.chunk.js.map": "./static/js/2.3105a913.chunk.js.map",
+    "static/js/3.2d09b2e8.chunk.js": "./static/js/3.2d09b2e8.chunk.js",
+    "static/js/3.2d09b2e8.chunk.js.map": "./static/js/3.2d09b2e8.chunk.js.map",
     "index.html": "./index.html",
     "static/css/main.bf234999.chunk.css.map": "./static/css/main.bf234999.chunk.css.map",
-    "static/js/2.04f7f055.chunk.js.LICENSE.txt": "./static/js/2.04f7f055.chunk.js.LICENSE.txt",
-    "static/js/main.c462efcc.chunk.js.LICENSE.txt": "./static/js/main.c462efcc.chunk.js.LICENSE.txt",
+    "static/js/2.3105a913.chunk.js.LICENSE.txt": "./static/js/2.3105a913.chunk.js.LICENSE.txt",
+    "static/js/main.1886810c.chunk.js.LICENSE.txt": "./static/js/main.1886810c.chunk.js.LICENSE.txt",
     "static/media/CBPi_logo.7d1627f1.svg": "./static/media/CBPi_logo.7d1627f1.svg",
     "static/media/brasil_flag.dade8d55.png": "./static/media/brasil_flag.dade8d55.png",
     "static/media/cbpi.f1a4ae59.png": "./static/media/cbpi.f1a4ae59.png",
@@ -24,9 +24,9 @@
     "static/media/usa_flag.dc5e3900.png": "./static/media/usa_flag.dc5e3900.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a99843c7.js",
-    "static/js/2.04f7f055.chunk.js",
+    "static/js/runtime-main.6e748a7c.js",
+    "static/js/2.3105a913.chunk.js",
     "static/css/main.bf234999.chunk.css",
-    "static/js/main.c462efcc.chunk.js"
+    "static/js/main.1886810c.chunk.js"
   ]
 }

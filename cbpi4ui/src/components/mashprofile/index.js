@@ -149,7 +149,7 @@ const MashProfile = () => {
                         {t("StepTypeSelect_"+row.type)}
                       </TableCell>
                       <TableCell align="right" className="hidden-xs">
-                        {row.state_text}
+                        {t(row.state_text)}
                       </TableCell>
                       <TableCell align="right" className="hidden-xs">
                         <StepStateChip state={row.status} />

@@ -46,6 +46,7 @@
     "mashprofile_clear" : "Clear",
     "mashprofile_save_text" : "Do you want to save your recipe to the recipe book",
     "profile" : "Profile",
+    "Waiting for Target Temp" : "Waiting for Target Temp",
     
     "dashboard" : "Dashboard",
     "mash profile" : "Mash Profile",
@@ -488,7 +489,16 @@
     "propsedit_Time in seconds for power base interval (Default:5)" : "Time in seconds for power base interval (Default:5)",
     "Actor" : "Actor",
     "Sensor" : "Sensor",
-
+    "propsedit_Output_Step" : "Output_Step",
+    "propsedit_P" : "P",
+    "propsedit_I" : "I",
+    "propsedit_D" : "D",
+    "propsedit_Default: 100. Sets the output when stepping up/down." : "Default: 100. Sets the output when stepping up/down.",
+    "propsedit_Max_Output" : "Max_Output",
+    "propsedit_Default: 100. Sets the max power output." : "Default: 100. Sets the max power output.",
+    "propsedit_lockback_seconds" : "lockback_seconds",
+    "propsedit_Default: 30. How far back to look for min/max temps." : "Default: 30. How far back to look for min/max temps.",
+  
     "StepTypeSelect_Logic" : "Logic",
     "StepTypeSelect_MashStep" : "MashStep",
     "StepTypeSelect_BoilStep" : "BoilStep",
@@ -508,6 +518,10 @@
 
     "hardware_kettle_LogicSelect_Logic" : "Logic",
     "hardware_kettle_LogicSelect_Hysteresis" : "Hysteresis",
+    "hardware_kettle_LogicSelect_BM_PID_SmartBoilWithPump" : "BM_PID_SmartBoilWithPump",
+    "hardware_kettle_LogicSelect_PIDBoil" : "PIDBoil",
+    "hardware_kettle_LogicSelect_PID_HERMS" : "PID_HERMS",
+    "hardware_kettle_LogicSelect_PIDAutoTune" : "PIDAutoTune",
     "hardware_kettle_LogicSelect_" : "",
     "hardware_Fermenter_Logic_Select_" : "",
     "hardware_Fermenter_Logic_Select_FermenterLogic" : "FermenterLogic",
@@ -520,6 +534,7 @@
     "hardware_SensorTypeSelect_DummyPressure" : "DummyPressure",
     "hardware_SensorTypeSelect_HTTPSensor" : "HTTPSensor",
     "hardware_SensorTypeSelect_OneWire" : "OneWire",
+    
 
     "hardware_actor not found" : "Actor not Found",
 

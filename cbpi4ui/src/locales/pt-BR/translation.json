@@ -46,6 +46,7 @@
     "mashprofile_clear" : "Limpar",
     "mashprofile_save_text" : "Você deseja salvar sua receita no livro de receitas?",
     "profile" : "Perfil",
+    "Waiting for Target Temp" : "Aguardando temperatura Alvo",
     
     "dashboard" : "Painel de Controle",
     "mash profile" : "Perfil de Mostura",
@@ -485,6 +486,16 @@
     "propsedit_Time in seconds for power base interval (Default:5)" : "Tempo em segundos para o intervalo da base de potência (Padrão: 5)",
     "Actor" : "Atuador",
     "Sensor" : "Sensor",
+    "propsedit_Output_Step" : "Etapa de Saida",
+    "propsedit_P" : "P",
+    "propsedit_I" : "I",
+    "propsedit_D" : "D",
+    "propsedit_Default: 100. Sets the output when stepping up/down." : "Padrão: 100. Define a saída ao subir/descer.",
+    "propsedit_Max_Output" : "Saida Maxima",
+    "propsedit_Default: 100. Sets the max power output." : "Padrão: 100. Define a saída de potência máxima.",
+    "propsedit_lockback_seconds" : "segundos de bloqueio",
+    "propsedit_Default: 30. How far back to look for min/max temps." : "Padrão: 30. Quão longe procurar por temperaturas mínimas/máximas.",
+  
 
     "StepTypeSelect_Logic" : "Logica",
     "StepTypeSelect_MashStep" : "Etapa De Mostura",
@@ -505,6 +516,10 @@
     
     "hardware_kettle_LogicSelect_Logic" : "Logica",
     "hardware_kettle_LogicSelect_Hysteresis" : "Histerese",
+    "hardware_kettle_LogicSelect_BM_PID_SmartBoilWithPump" : "BM_PID_SmartBoilWithPump(Plugin)",
+    "hardware_kettle_LogicSelect_PIDBoil" : "PIDBoil(Plugin)",
+    "hardware_kettle_LogicSelect_PID_HERMS" : "PID_HERMS(Plugin)",
+    "hardware_kettle_LogicSelect_PIDAutoTune" : "PIDAutoTune(Plugin)",
     "hardware_kettle_LogicSelect_" : "",
     "hardware_Fermenter_Logic_Select_" : "",
     "hardware_Fermenter_Logic_Select_FermenterLogic" : "Logica da Fermentadora",
