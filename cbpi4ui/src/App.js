@@ -168,7 +168,7 @@ const CraftBeerPiApp = () => {
                 </div>
                 <div class="flag_buttons"> 
                   <img src={usflag} id="usaflag" onClick={changeLanguage("en")}/>
-                  <img src={brflag} id="brasilflag" onClick={changeLanguage("ptbr")}/>
+                  <img src={brflag} id="brasilflag" onClick={changeLanguage("pt-BR")}/>
                   <img src={gerflag} id="germanyflag"/>
                   <img src={spainflag} id="spain-flag"/>
                 </div>

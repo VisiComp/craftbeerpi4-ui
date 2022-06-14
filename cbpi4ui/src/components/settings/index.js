@@ -128,6 +128,7 @@ const Settings = () => {
 
   const { t, i18n } = useTranslation();
 
+  const [lang, setLang] = React.useState('');
 
   return (
     <>
@@ -172,6 +173,38 @@ const Settings = () => {
             </TableRow>
           </TableHead>
           <TableBody>
+            <TableRow>
+            <TableCell component="th" scope="row">
+              {t('settings_language')} 
+              <div>
+                <small>{t('settings_description_language')}</small>
+              </div>
+            </TableCell>
+            <TableCell align="right">
+              <Select 
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={lang}
+              label=""
+              onChange={(e) => {setLang(e.target.value)}}
+              >
+
+                <MenuItem value={'en'}>
+                  Deutsche
+                </MenuItem>
+                <MenuItem value={'en'}>
+                  English
+                </MenuItem>
+                <MenuItem value={"pt-BR"}>
+                  Español
+                </MenuItem>
+                <MenuItem value={"pt-BR"}>
+                  Português
+                </MenuItem>
+             
+              </Select>
+            </TableCell>
+            </TableRow>
             {Object.keys(data).map((key) => (
               <TableRow key={key} selected={config[key].changed}>
                 <TableCell component="th" scope="row">

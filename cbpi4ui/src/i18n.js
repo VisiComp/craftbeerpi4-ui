@@ -3,9 +3,12 @@ import { initReactI18next } from 'react-i18next';
 import PTBR from './locales/pt-BR/translation.json';
 import ENUS from './locales/en/translation.json';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import XHR from "i18next-http-backend" // <---- add this
 
 
 i18n
+  .use(XHR) // <---- add this
+
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
   .use(LanguageDetector)
@@ -24,7 +27,7 @@ i18n
         en:{
             translation: ENUS
         },
-        ptbr:{
+        "pt-BR":{
             translation: PTBR
         }
     }
