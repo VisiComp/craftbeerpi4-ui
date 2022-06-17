@@ -128,7 +128,14 @@ const Settings = () => {
 
   const { t, i18n } = useTranslation();
 
-  const [lang, setLang] = React.useState('');
+  const [lang, setLang] = React.useState(localStorage.getItem('i18nextLng'));
+
+  const changeLanguage = (lang) =>{
+    return()=>{
+      i18n.changeLanguage(lang)
+
+    };
+  };
 
   return (
     <>
@@ -186,16 +193,19 @@ const Settings = () => {
               id="demo-simple-select"
               value={lang}
               label=""
-              onChange={(e) => {setLang(e.target.value)}}
+              onChange={(e) => {
+                setLang(e.target.value);
+                i18n.changeLanguage(e.target.value);
+              }}
               >
 
-                <MenuItem value={'en'}>
+                <MenuItem value={'ge'}>
                   Deutsche
                 </MenuItem>
                 <MenuItem value={'en'}>
                   English
                 </MenuItem>
-                <MenuItem value={"pt-BR"}>
+                <MenuItem value={"es"}>
                   Español
                 </MenuItem>
                 <MenuItem value={"pt-BR"}>

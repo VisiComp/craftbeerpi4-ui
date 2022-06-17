@@ -29,10 +29,6 @@ import Settings from "./components/settings";
 import Menu from "./components/util/Menu";
 import PrivateRoute from "./components/util/PrivateRoute";
 import logo from "./images/cbpi_no_border.png";
-import usflag from "./images/usa_flag.png";
-import brflag from "./images/brasil_flag.png";
-import gerflag from "./images/ger_flag.png";
-import spainflag from "./images/spain_flag.png";
 import StepForm from "./components/mashprofile/StepForm";
 import FermenterStepForm from "./components/fermenterprofile/FermenterStepForm";
 import Recipes from "./components/recipes";
@@ -143,12 +139,6 @@ const CraftBeerPiApp = () => {
     setOpen(true);
   };
 
-  const changeLanguage = (ln) =>{
-    return()=>{
-      i18n.changeLanguage(ln)
-
-    };
-  };
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -165,12 +155,6 @@ const CraftBeerPiApp = () => {
                   <Typography component="h1" variant="h4" color="inherit" noWrap>
                     CraftBeerPi 4.0
                   </Typography>
-                </div>
-                <div class="flag_buttons"> 
-                  <img src={usflag} id="usaflag" onClick={changeLanguage("en")}/>
-                  <img src={brflag} id="brasilflag" onClick={changeLanguage("pt-BR")}/>
-                  <img src={gerflag} id="germanyflag"/>
-                  <img src={spainflag} id="spain-flag"/>
                 </div>
                 <IconButton color="inherit">
                   <Badge badgeContent={0} color="secondary">
